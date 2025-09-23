@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Donate — The Compute Initiative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CI</span>
+          <span class="brand-text">The Compute Initiative</span>
+        </a>
+        <button id="navToggle4" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav" id="mainNav4">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="donate.html" class="nav-link nav-cta">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Support our work</h1>
+        <p>Your donations help fund compute grants, workshops, and community support.</p>
+
+        <form id="donateForm" class="donate-form">
+          <label>
+            Donation amount
+            <select id="donationAmount">
+              <option value="25">$25</option>
+              <option value="50">$50</option>
+              <option value="100">$100</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <div id="customAmountWrap" style="display:none;">
+            <label>Custom amount
+              <input id="customAmount" type="number" min="1" placeholder="Amount in USD" />
+            </label>
+          </div>
+
+          <label>
+            Email
+            <input id="donorEmail" type="email" placeholder="you@example.com" required />
+          </label>
+
+          <button class="btn btn-primary" type="submit">Donate</button>
+        </form>
+
+        <p id="donateMsg" class="muted small"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>The Compute Initiative</strong>
+        </div>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="donate.html">Donate</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
