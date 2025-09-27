@@ -9,37 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		btn.addEventListener('click', () => nav && nav.classList.toggle('open'));
 	});
 
-	// Sample events data (would come from API in real site)
-	const sampleEvents = [
-		{id:1,title:'Intro to Cost-Effective Cloud Compute',date:'Oct 10, 2025',location:'Online',link:'#'},
-		{id:2,title:'Reproducible Workflows Workshop',date:'Nov 5, 2025',location:'San Francisco, CA',link:'#'},
-		{id:3,title:'Community Hackathon',date:'Dec 12, 2025',location:'Remote + In-person',link:'#'}
-	];
-
-	const eventsList = document.getElementById('eventsList');
-	const fullEventsList = document.getElementById('fullEventsList');
-	const renderEvent = (ev) => {
-		const li = document.createElement('li');
-		li.innerHTML = `<div><strong>${ev.title}</strong><div class="muted small">${ev.date} · ${ev.location}</div></div><div><a class=\"btn\" href=\"${ev.link}\">Register</a></div>`;
-		return li;
-	};
-	if(eventsList){
-		sampleEvents.slice(0,2).forEach(ev => eventsList.appendChild(renderEvent(ev)));
-	}
-	if(fullEventsList){
-		sampleEvents.forEach(ev => fullEventsList.appendChild(renderEvent(ev)));
-	}
+	// Events removed — no event population
 
 	// Subscribe form
 	const subscribeForm = document.getElementById('subscribeForm');
 	const subscribeMsg = document.getElementById('subscribeMsg');
 	if(subscribeForm){
-		subscribeForm.addEventListener('submit', (e) => {
-			e.preventDefault();
-			const email = document.getElementById('emailInput').value;
-			subscribeMsg.textContent = `Thanks — we'll send updates to ${email}.`;
-			subscribeForm.reset();
-		});
+			subscribeForm.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const email = document.getElementById('emailInput').value;
+				// Open user's mail client to send subscription email to the org
+				const mailto = `mailto:computeinitiative@gmail.com?subject=${encodeURIComponent('Subscribe request')}&body=${encodeURIComponent('Please add ' + email + ' to the mailing list.')}`;
+				window.location.href = mailto;
+				subscribeMsg.textContent = `Thanks — opened your mail client to send the subscription request for ${email}.`;
+				subscribeForm.reset();
+			});
 	}
 
 	// Donate form
