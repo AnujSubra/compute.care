@@ -1,10 +1,13 @@
 :root{
-	--bg:#0f1724;
-	--card:#0b1220;
-	--muted:#9aa4b2;
-	--accent:#6ee7b7;
-	--accent-2:#60a5fa;
-	--text:#e6eef6;
+	/* Palette extracted from TCI logo */
+	--logo-light: #eef1f0; /* very light */
+	--accent: #038f6f;    /* primary green-teal */
+	--accent-2: #0c8c90;  /* secondary teal */
+	--accent-3: #de702b;  /* warm orange accent for highlights */
+	--bg: #126063;        /* deep teal background */
+	--card: #0b1620;      /* dark card background */
+	--muted: #97a8b0;     /* muted text */
+	--text: #eef1f0;      /* main text */
 	--max-width:1100px;
 	--radius:10px;
 	font-size:16px;
@@ -13,14 +16,26 @@
 html,body{height:100%}
 body{
 	margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-	background:linear-gradient(180deg,#031022 0%, #071226 60%);
+	background:linear-gradient(180deg,var(--bg) 0%, #071226 60%);
 	color:var(--text);
 	-webkit-font-smoothing:antialiased;
 }
 .container{max-width:var(--max-width);margin:0 auto;padding:28px}
-.site-header{background:transparent;padding:14px 0}
-.header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.site-header{background:transparent;padding:20px 0}
+.header-inner{display:flex;align-items:center;gap:20px;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none}
+.brand-mark{background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:8px;border-radius:8px;font-weight:800}
+.brand-text{font-weight:700;color:var(--logo-light)}
+.nav{display:flex;gap:14px;align-items:center}
+.nav-link{color:var(--text);text-decoration:none;padding:8px;border-radius:6px}
+.nav-link:hover{background:rgba(255,255,255,0.02)}
+.nav-cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04202b;padding:8px 12px}
+.nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:20px}
+
+.hero{padding:72px 0 96px;background:linear-gradient(180deg,rgba(6,10,18,0.2),transparent);position:relative;z-index:5}
+.hero-title{font-size:36px;margin:0 0 12px}
+.hero-sub{color:var(--muted);margin:0 0 18px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);text-decoration:none}
 .brand-mark{background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:8px;border-radius:8px;font-weight:800}
 .brand-text{font-weight:700}
 .nav{display:flex;gap:14px;align-items:center}
@@ -33,26 +48,39 @@ body{
 .hero-title{font-size:36px;margin:0 0 12px}
 .hero-sub{color:var(--muted);margin:0 0 18px}
 .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);text-decoration:none}
-.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#032; border:0}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04202b; border:0}
+.btn-accent3{background:var(--accent-3);color:#fff;border:0}
+.hero-actions .btn{margin-right:10px}
+
+.brand-logo{height:96px;width:auto;border-radius:10px;box-shadow:0 8px 20px rgba(2,8,10,0.45)}
+.brand-text{font-size:20px;font-weight:800;letter-spacing:0.3px}
 .hero-actions .btn{margin-right:10px}
 
 .grid{display:grid;gap:18px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);} 
+.intro{
+	background:var(--card);
+	padding:36px 28px;
+	border-radius:14px;
+	margin-top:36px;
+	box-shadow:0 12px 30px rgba(3,12,18,0.45);
+}
 .card h3{margin-top:0}
 
 .events-list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:12px}
 .events-list li{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:8px;background:rgba(255,255,255,0.01)}
 .section-header{display:flex;justify-content:space-between;align-items:center}
 
-.newsletter{margin:28px 0}
-.form-inline{display:flex;gap:8px}
-.form-inline input[type=email]{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.newsletter{margin:36px auto 48px;text-align:center;background:var(--card);padding:28px;border-radius:12px;box-shadow:0 10px 24px rgba(3,12,18,0.35);max-width:var(--max-width);width:calc(100% - 56px)}
+.form-inline{display:flex;gap:8px;justify-content:center;align-items:center}
+.form-inline input[type=email]{flex:0 1 360px;max-width:70%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+.form-inline button{flex:0 0 auto}
 .muted{color:var(--muted)}
 .small{font-size:13px}
 
-.site-footer{border-top:1px solid rgba(255,255,255,0.02);padding:20px 0;margin-top:28px}
-.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.site-footer{background:linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.12));padding:28px 0;margin-top:48px;border-top:0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .footer-nav a{color:var(--muted);text-decoration:none;margin-left:12px}
 
 @media (max-width:900px){
@@ -62,7 +90,16 @@ body{
 	.nav-toggle{display:block}
 	.container{padding:18px}
 	.hero-title{font-size:26px}
+
+	/* stack the subscribe form on narrow screens */
+	.form-inline{flex-direction:column;gap:10px}
+	.form-inline input[type=email]{max-width:100%;width:100%}
+
+	/* scale down logo on small screens so header remains compact */
+	.brand-logo{height:56px}
+	.brand-text{font-size:16px}
 }
 
 /* simple utility classes */
 .link-muted{color:var(--accent-2);text-decoration:none}
+
