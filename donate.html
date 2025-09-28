@@ -6,6 +6,51 @@
     <title>Donate — The Compute Initiative</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Stylized GoFundMe promotion section */
+      .gofundme-promo {
+        background: linear-gradient(90deg, #38ef7d 0%, #11998e 100%);
+        color: white;
+        border-radius: 1.2em;
+        padding: 2em 1em;
+        margin: 2em 0;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(17,153,142,0.12);
+      }
+      .gofundme-promo h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.4em;
+        letter-spacing: 0.03em;
+      }
+      .gofundme-promo p {
+        font-size: 1.15em;
+        margin-bottom: 1em;
+      }
+      .gofundme-btn {
+        display: inline-block;
+        background: #fff;
+        color: #11998e;
+        font-weight: 600;
+        padding: 0.85em 2em;
+        font-size: 1.1em;
+        border-radius: 2em;
+        box-shadow: 0 2px 8px rgba(56,239,125,0.1);
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+      }
+      .gofundme-btn:hover, .gofundme-btn:focus {
+        background: #11998e;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(17,153,142,0.15);
+      }
+      .gofundme-promo .gfm-logo {
+        vertical-align: middle;
+        width: 40px;
+        margin-right: 0.45em;
+        margin-bottom: 0.15em;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -29,9 +74,23 @@
         <p>Your donations help fund education, devices, and the initiative.</p>
         <p>Donate through our GoFundMe: https://gofund.me/e507a041f </p>
 
-        
+        <!-- GOFUNDME PROMO SECTION -->
+        <div class="gofundme-promo">
+          <h2>
+            <img src="https://assets.gofundme.com/assets/gfm-logo-green.svg" alt="GoFundMe" class="gfm-logo"/>
+            Support us on GoFundMe!
+          </h2>
+          <p>
+            Every dollar you donate brings us closer to our goal of creating real impact in our community.<br>
+            Help us fund devices, education, and future opportunities.<br>
+            <strong>Be part of the change — donate today!</strong>
+          </p>
+          <a href="https://gofund.me/e507a041f" class="gofundme-btn" target="_blank" rel="noopener">
+            Donate Now
+          </a>
+        </div>
+        <!-- END GOFUNDME PROMO SECTION -->
 
-        
       </section>
     </main>
 
