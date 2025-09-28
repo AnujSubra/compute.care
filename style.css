@@ -102,6 +102,27 @@ body{
 	.brand-logo{height:56px}
 	.brand-text{font-size:16px}
 }
+.event-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 2em;
+}
 
+.event-images figure {
+  flex: 1 1 350px;
+  max-width: 350px;
+}
+
+.event-photo {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
 /* simple utility classes */
 .link-muted{color:var(--accent-2);text-decoration:none}
