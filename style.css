@@ -32,7 +32,7 @@ body{
 .nav-cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04202b;padding:8px 12px}
 .nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:20px}
 
-.hero{padding:72px 0 96px;background:linear-gradient(180deg,rgba(6,10,18,0.2),transparent);position:relative;z-index:5}
+.hero{padding:72px 0 96px;background:linear-gradient(180deg,rgba(6,10,18,0.2),transparent);position:relative}
 .hero-title{font-size:36px;margin:0 0 12px}
 .hero-sub{color:var(--muted);margin:0 0 18px}
 .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);text-decoration:none}
@@ -66,6 +66,9 @@ body{
 	margin-top:36px;
 	box-shadow:0 12px 30px rgba(3,12,18,0.45);
 }
+
+.about{margin-top:48px;position:relative;z-index:2}
+.about .card{background:var(--card);color:var(--text);box-shadow:0 12px 30px rgba(3,12,18,0.45)}
 .card h3{margin-top:0}
 
 .events-list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:12px}
@@ -102,4 +105,3 @@ body{
 
 /* simple utility classes */
 .link-muted{color:var(--accent-2);text-decoration:none}
-
