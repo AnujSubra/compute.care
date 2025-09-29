@@ -11,19 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Events removed — no event population
 
-	// Subscribe form
-	const subscribeForm = document.getElementById('subscribeForm');
-	const subscribeMsg = document.getElementById('subscribeMsg');
-	if(subscribeForm){
-			subscribeForm.addEventListener('submit', (e) => {
-				e.preventDefault();
-				const email = document.getElementById('emailInput').value;
-				// Open user's mail client to send subscription email to the org
-				const mailto = `mailto:computeinitiative@gmail.com?subject=${encodeURIComponent('Subscribe request')}&body=${encodeURIComponent('Please add ' + email + ' to the mailing list.')}`;
-				window.location.href = mailto;
-				subscribeMsg.textContent = `Thanks — opened your mail client to send the subscription request for ${email}.`;
-				subscribeForm.reset();
-			});
+	// Message form (replaces subscribe form)
+	const messageForm = document.getElementById('messageForm');
+	const messageMsg = document.getElementById('messageMsg');
+	if(messageForm){
+		messageForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const email = document.getElementById('emailInput').value;
+			const message = document.getElementById('messageInput').value;
+			if(!email || !message){
+				messageMsg.textContent = 'Please enter both your email and message.';
+				return;
+			}
+			// Open user's mail client to send the message to the org
+			const mailto = `mailto:computeinitiative@gmail.com?subject=${encodeURIComponent('Message from site visitor')}&body=${encodeURIComponent('From: ' + email + '\n\nMessage:\n' + message)}`;
+			window.location.href = mailto;
+			messageMsg.textContent = `Thanks — opened your mail client to send your message from ${email}.`;
+			messageForm.reset();
+		});
 	}
 
 	// Donate form
