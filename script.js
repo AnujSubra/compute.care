@@ -9,25 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		btn.addEventListener('click', () => nav && nav.classList.toggle('open'));
 	});
 
-	// Events removed — no event population
-
-	// Message form (replaces subscribe form)
-	const messageForm = document.getElementById('messageForm');
-	const messageMsg = document.getElementById('messageMsg');
-	if(messageForm){
-		messageForm.addEventListener('submit', (e) => {
+	// Contact form handler (for contact.html)
+	const contactForm = document.getElementById('contactForm');
+	const contactMsg = document.getElementById('contactMsg');
+	if(contactForm){
+		contactForm.addEventListener('submit', (e) => {
 			e.preventDefault();
-			const email = document.getElementById('emailInput').value;
-			const message = document.getElementById('messageInput').value;
-			if(!email || !message){
-				messageMsg.textContent = 'Please enter both your email and message.';
+			const name = document.getElementById('contactName').value.trim();
+			const email = document.getElementById('contactEmail').value.trim();
+			const type = document.getElementById('contactType').value;
+			const message = document.getElementById('contactMessage').value.trim();
+
+			if(!name || !email || !type || !message){
+				contactMsg.textContent = 'Please fill out all fields.';
+				contactMsg.className = 'form-error';
 				return;
 			}
 			// Open user's mail client to send the message to the org
-			const mailto = `mailto:computeinitiative@gmail.com?subject=${encodeURIComponent('Message from site visitor')}&body=${encodeURIComponent('From: ' + email + '\n\nMessage:\n' + message)}`;
+			const mailto = `mailto:computeinitiative@gmail.com?subject=${encodeURIComponent('[' + type + '] Message from ' + name)}&body=${encodeURIComponent(
+				'Name: ' + name + '\nEmail: ' + email + '\nType: ' + type + '\n\nMessage:\n' + message
+			)}`;
 			window.location.href = mailto;
-			messageMsg.textContent = `Thanks — opened your mail client to send your message from ${email}.`;
-			messageForm.reset();
+			contactMsg.textContent = `Thank you, ${name}! We've opened your email client to send your message.`;
+			contactMsg.className = 'form-success';
+			contactForm.reset();
 		});
 	}
 
@@ -57,4 +62,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 });
-
