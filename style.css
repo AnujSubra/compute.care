@@ -126,3 +126,74 @@ body{
 }
 /* simple utility classes */
 .link-muted{color:var(--accent-2);text-decoration:none}
+/* ...existing styles... */
+
+/* Stylish Contact Form */
+.contact-section {
+  max-width: 600px;
+  margin: 48px auto;
+  background: var(--card);
+  box-shadow: 0 10px 24px rgba(3,12,18,0.35);
+  border-radius: 18px;
+  padding: 36px 36px 28px 36px;
+}
+.contact-section h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.contact-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-form label {
+  font-weight: 600;
+  color: var(--accent-2);
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  font-size: 1em;
+  margin-top: 2px;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-2);
+  outline: none;
+  background: rgba(255,255,255,0.08);
+}
+.contact-form button {
+  align-self: flex-start;
+  min-width: 140px;
+  margin-top: 12px;
+}
+.form-success {
+  color: var(--accent);
+  margin-top: 16px;
+  font-weight: 600;
+}
+.form-error {
+  color: var(--accent-3);
+  margin-top: 16px;
+  font-weight: 600;
+}
+.contact-alt {
+  margin-top: 30px;
+  text-align: center;
+}
+@media (max-width:700px){
+  .contact-section { padding: 24px 12px; }
+}
