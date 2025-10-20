@@ -197,27 +197,49 @@ body{
 @media (max-width:700px){
   .contact-section { padding: 24px 12px; }
 }
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
+
+/* Accessible and visible link styles applied site-wide */
+a {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,255,255,0.14); /* subtle on dark bg */
 }
 
 a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
+  color: var(--muted);
+  text-decoration-color: rgba(255,255,255,0.08);
 }
 
-a:hover {
-  color: red;
-  background-color: transparent;
+a:hover,
+ a:focus {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+  outline: 3px solid rgba(12,140,144,0.14); /* subtle focus ring */
+  outline-offset: 3px;
+}
+
+/* Keep nav links highly readable but still indicate link state with a subtle underline */
+.nav-link,
+.footer-nav a {
+  color: var(--text);
   text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.04);
+  text-underline-offset: 4px;
 }
 
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
+.nav-link:hover,
+.footer-nav a:hover,
+.nav-link:focus,
+.footer-nav a:focus {
+  color: var(--text);
+  text-decoration-color: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.02);
+  outline: none;
 }
 
+/* Utility: force underline when using link-muted class */
+.link-muted { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.12); color: var(--accent-2); }
+
+/* End of file */
