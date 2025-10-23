@@ -76,6 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // ];
 
 const extraImages = [
+	"PHOTO-2025-10-03-10-27-14 2.jpg"
+	"PHOTO-2025-10-03-10-27-14 3.jpg"
+	"PHOTO-2025-10-03-10-27-14 4.jpg"
+	"PHOTO-2025-10-03-10-27-14 5.jpg"
+	"PHOTO-2025-10-03-10-27-14.jpg"
+	"PHOTO-2025-10-04-21-25-46.jpg"
+	"PHOTO-2025-10-12-08-34-48.jpg"
   // <-- Add your other image filenames here (one string per image)
 ];
 
