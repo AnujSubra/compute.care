@@ -76,12 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // ];
 
 const extraImages = [
-	"PHOTO-2025-10-03-10-27-14 2.jpg"
-	"PHOTO-2025-10-03-10-27-14 3.jpg"
-	"PHOTO-2025-10-03-10-27-14 4.jpg"
-	"PHOTO-2025-10-03-10-27-14 5.jpg"
-	"PHOTO-2025-10-03-10-27-14.jpg"
-	"PHOTO-2025-10-04-21-25-46.jpg"
+	"PHOTO-2025-10-03-10-27-14 2.jpg",
+	"PHOTO-2025-10-03-10-27-14 3.jpg",
+	"PHOTO-2025-10-03-10-27-14 4.jpg",
+	"PHOTO-2025-10-03-10-27-14 5.jpg",
+	"PHOTO-2025-10-03-10-27-14.jpg",
+	"PHOTO-2025-10-04-21-25-46.jpg",
 	"PHOTO-2025-10-12-08-34-48.jpg"
   // <-- Add your other image filenames here (one string per image)
 ];
@@ -102,9 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const images = [...existingImages, ...extraImages];
 
   if (images.length === 0) {
-    track.innerHTML = '<div class="carousel-slide"><p>No images available.</p></div>';
-    prevBtn.style.display = 'none';
-    nextBtn.style.display = 'none';
+    if (track) track.innerHTML = '<div class="carousel-slide"><p>No images available.</p></div>';
+    if (prevBtn) prevBtn.style.display = 'none';
+    if (nextBtn) nextBtn.style.display = 'none';
     return;
   }
 
@@ -112,17 +112,34 @@ document.addEventListener('DOMContentLoaded', () => {
   images.forEach((src, i) => {
     const slide = document.createElement('div');
     slide.className = 'carousel-slide';
+    // Make slide occupy full viewport width and center content so full image is visible
+    slide.style.minWidth = '100%';
+    slide.style.boxSizing = 'border-box';
+    slide.style.display = 'flex';
+    slide.style.alignItems = 'center';
+    slide.style.justifyContent = 'center';
+    slide.style.overflow = 'hidden';
+
     const img = document.createElement('img');
     img.className = 'carousel-img';
     img.src = src;
     img.alt = `Event photo ${i + 1}`;
+
+    // Ensure image doesn't get cropped: allow it to scale down to fit viewport
+    img.style.maxWidth = '100%';
+    img.style.maxHeight = '70vh'; // you can adjust this (e.g., 80vh or a fixed px value)
+    img.style.width = 'auto';
+    img.style.height = 'auto';
+    img.style.objectFit = 'contain';
+    img.style.display = 'block';
+
     // add error handler so broken filenames don't break the layout
     img.onerror = () => {
       img.style.display = 'none';
       slide.innerHTML = '<div style="padding:24px;color:#666">Image not found: ' + src + '</div>';
     };
     slide.appendChild(img);
-    track.appendChild(slide);
+    if (track) track.appendChild(slide);
 
     // dot
     const dot = document.createElement('button');
@@ -130,13 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
     dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
     dot.setAttribute('aria-label', `Show slide ${i + 1}`);
     dot.addEventListener('click', () => moveToSlide(i));
-    dotsContainer.appendChild(dot);
+    if (dotsContainer) dotsContainer.appendChild(dot);
   });
 
-  const slides = Array.from(track.children);
+  const slides = track ? Array.from(track.children) : [];
   let index = 0;
   let isAnimating = false;
   let autoplayTimer = null;
+  const viewport = document.querySelector('.carousel-viewport');
 
   function updateButtons() {
     // If you want wrap-around behavior, keep both visible always.
@@ -144,9 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function moveToSlide(newIndex) {
+    if (!track || slides.length === 0) return;
     if (isAnimating) return;
     isAnimating = true;
-    const slideWidth = slides[0].getBoundingClientRect().width;
+    const slideWidth = (viewport && viewport.getBoundingClientRect().width) || slides[0].getBoundingClientRect().width;
     track.style.transform = `translateX(-${newIndex * slideWidth}px)`;
     updateDots(newIndex);
     index = (newIndex + slides.length) % slides.length;
@@ -154,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateDots(activeIndex) {
+    if (!dotsContainer) return;
     Array.from(dotsContainer.children).forEach((d, i) => {
       d.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
     });
@@ -162,8 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function next() { moveToSlide((index + 1) % slides.length); }
   function prev() { moveToSlide((index - 1 + slides.length) % slides.length); }
 
-  nextBtn.addEventListener('click', next);
-  prevBtn.addEventListener('click', prev);
+  if (nextBtn) nextBtn.addEventListener('click', next);
+  if (prevBtn) prevBtn.addEventListener('click', prev);
 
   // keyboard
   document.addEventListener('keydown', (e) => {
@@ -174,20 +194,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // touch support (swipe)
   let startX = 0;
   let deltaX = 0;
-  const viewport = document.querySelector('.carousel-viewport');
-  viewport.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  }, { passive: true });
-  viewport.addEventListener('touchmove', (e) => {
-    deltaX = e.touches[0].clientX - startX;
-  }, { passive: true });
-  viewport.addEventListener('touchend', () => {
-    if (Math.abs(deltaX) > 40) {
-      if (deltaX < 0) next();
-      else prev();
-    }
-    deltaX = 0;
-  });
+  if (viewport) {
+    viewport.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    viewport.addEventListener('touchmove', (e) => {
+      deltaX = e.touches[0].clientX - startX;
+    }, { passive: true });
+    viewport.addEventListener('touchend', () => {
+      if (Math.abs(deltaX) > 40) {
+        if (deltaX < 0) next();
+        else prev();
+      }
+      deltaX = 0;
+    });
+  }
 
   // handle resize so transform uses correct pixel width
   let resizeTimer;
@@ -206,8 +227,10 @@ document.addEventListener('DOMContentLoaded', () => {
     autoplayTimer = null;
   }
 
-  viewport.addEventListener('mouseenter', stopAutoplay);
-  viewport.addEventListener('mouseleave', startAutoplay);
+  if (viewport) {
+    viewport.addEventListener('mouseenter', stopAutoplay);
+    viewport.addEventListener('mouseleave', startAutoplay);
+  }
 
   // Initialize
   // Force a layout and move to the first slide
