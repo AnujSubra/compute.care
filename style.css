@@ -241,5 +241,104 @@ a:hover,
 
 /* Utility: force underline when using link-muted class */
 .link-muted { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.12); color: var(--accent-2); }
+/* Existing styles kept; add/replace the sections below or merge as needed */
 
+/* --- Carousel & image sizing styles --- */
+.carousel {
+  position: relative;
+  margin: 1.5rem 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  background: #f6f6f6;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 400ms ease;
+  will-change: transform;
+}
+
+/* Each slide occupies full viewport width */
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Force a consistent visual size for all event images */
+.carousel-img,
+.event-photo {
+  width: 100%;
+  /* caps the visual width; adjust as needed */
+  max-width: 900px;
+  /* fixed visual height so all images are same size */
+  height: 360px;
+  object-fit: cover; /* center-crop to preserve aspect ratio */
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.06);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button.prev { left: 12px; }
+.carousel-button.next { right: 12px; }
+
+/* Dots */
+.carousel-dots {
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:12px;
+}
+
+.carousel-dot {
+  width:10px;
+  height:10px;
+  background:#d0d0d0;
+  border-radius:50%;
+  cursor:pointer;
+  border: none;
+}
+
+.carousel-dot[aria-selected="true"],
+.carousel-dot:focus {
+  background:#333;
+  outline: none;
+}
+
+/* Small screens adjustments */
+@media (max-width: 600px) {
+  .carousel-img,
+  .event-photo { height: 220px; }
+  .carousel-button { width:36px; height:36px; }
+}
+
+/* keep your other styles below or above as needed */
 /* End of file */
