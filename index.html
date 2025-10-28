@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,19 +9,36 @@
     <link rel="stylesheet" href="style.css" />
     <meta name="description" content="The Compute Initiative — community, events, and research support for computational projects." />
 
-    <!-- Inline CSS for hero background + header overlay -->
+    <!-- Styles to place the photo behind the top area (logo + nav) only -->
     <style>
-      /* Put the photo behind the header + navigation by making the header overlay the hero background */
-      .site-header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: transparent; /* let the hero image show through */
-        z-index: 30; /* sit above the hero background */
+      /* A banner that sits above the hero and provides the photo as background */
+      .page-top {
+        background-image: url('PHOTO-2025-10-03-07-31-33.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        min-height: 180px; /* height of the top banner area */
+        position: relative;
       }
 
-      /* Ensure header internals stay visible */
+      /* Optional dark overlay so logo/nav contrast is maintained */
+      .page-top::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.24);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      /* Keep the header visually above the banner */
+      .site-header {
+        background: transparent; /* let the banner show through */
+        position: relative;
+        z-index: 2; /* above the banner overlay */
+      }
+
+      /* Ensure header content is visible and positioned nicely within the banner */
       .header-inner {
         display: flex;
         align-items: center;
@@ -31,76 +47,47 @@
         padding: 1rem 0;
       }
 
-      /* Make sure brand and nav are above the hero overlay */
+      /* Make brand and nav visually sit above overlay */
       .brand,
       .nav,
       .nav-toggle {
         position: relative;
-        z-index: 31;
+        z-index: 3;
       }
 
-      /* Hero now uses the photo as a background that starts at the top of the page */
-      .hero {
-        background-image: url('PHOTO-2025-10-03-07-31-33.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: white; /* text over the photo */
-        position: relative;
-        padding: 6.5rem 0 4rem; /* top padding to ensure hero content sits below header */
-        margin-top: 0;
-      }
+      /* Improve visibility of brand text and nav links on top of the photo */
+      .brand-text { color: #fff; font-weight: 600; }
+      .nav-link { color: #fff; }
 
-      /* Optional subtle dark overlay for better text contrast */
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.25);
-        z-index: 29; /* sits above the image but behind header and hero content */
-      }
+      /* Ensure the hero below is not affected */
+      .hero { margin-top: 0; }
 
-      /* Keep the hero container content above the overlay */
-      .hero > .container {
-        position: relative;
-        z-index: 32;
-      }
-
-      /* Make brand text / logo more visible on photo */
-      .brand-text {
-        color: #fff;
-        font-weight: 600;
-      }
-
-      /* Tweak nav link colors to be visible against photo if your style.css doesn't already handle it */
-      .nav-link {
-        color: #fff;
-      }
-
-      /* If style.css already sets nav-link colors, these will be overridden as needed */
+      /* Responsive tweaks */
       @media (max-width: 768px) {
-        .hero {
-          padding-top: 6rem;
-        }
+        .page-top { min-height: 140px; }
+        .brand-logo { max-height: 40px; }
       }
     </style>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">
-          <img src="TCI%20logo%20Sep%202025.png" alt="The Compute Initiative logo" class="brand-logo" />
-          <span class="brand-text">The Compute Initiative</span>
-        </a>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="nav" id="mainNav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="donate.html" class="nav-link nav-cta">Donate</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-        </nav>
-      </div>
-    </header>
+    <!-- page-top contains the photo background that appears behind the logo + nav only -->
+    <div class="page-top">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html">
+            <img src="TCI%20logo%20Sep%202025.png" alt="The Compute Initiative logo" class="brand-logo" />
+            <span class="brand-text">The Compute Initiative</span>
+          </a>
+          <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+          <nav class="nav" id="mainNav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="donate.html" class="nav-link nav-cta">Donate</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </nav>
+        </div>
+      </header>
+    </div>
 
     <main>
       <section class="hero">
@@ -135,7 +122,7 @@ The Compute Institute (TCi) has partnered with a government-aided SRM Arunachala
           </ul>
           <h2>Panayapatti Team</h2>
           <ul>
-            <li><strong>Teacher</strong>: Vidhya</li>
+            <li><strong>Teacher</strong>: Suthamathi</li>
             <li><strong>Headmaster</strong>: S. Anandhan</li>
           </ul>
 
@@ -190,3 +177,5 @@ Project-Based Learning: Applying learned concepts to create a small, functional 
     <script src="script.js"></script>
   </body>
 </html>
+
+
