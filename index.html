@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,6 +9,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <meta name="description" content="The Compute Initiative — community, events, and research support for computational projects." />
+
+    <!-- Inline CSS for hero background + header overlay -->
+    <style>
+      /* Put the photo behind the header + navigation by making the header overlay the hero background */
+      .site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: transparent; /* let the hero image show through */
+        z-index: 30; /* sit above the hero background */
+      }
+
+      /* Ensure header internals stay visible */
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 0;
+      }
+
+      /* Make sure brand and nav are above the hero overlay */
+      .brand,
+      .nav,
+      .nav-toggle {
+        position: relative;
+        z-index: 31;
+      }
+
+      /* Hero now uses the photo as a background that starts at the top of the page */
+      .hero {
+        background-image: url('PHOTO-2025-10-03-07-31-33.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white; /* text over the photo */
+        position: relative;
+        padding: 6.5rem 0 4rem; /* top padding to ensure hero content sits below header */
+        margin-top: 0;
+      }
+
+      /* Optional subtle dark overlay for better text contrast */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 29; /* sits above the image but behind header and hero content */
+      }
+
+      /* Keep the hero container content above the overlay */
+      .hero > .container {
+        position: relative;
+        z-index: 32;
+      }
+
+      /* Make brand text / logo more visible on photo */
+      .brand-text {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      /* Tweak nav link colors to be visible against photo if your style.css doesn't already handle it */
+      .nav-link {
+        color: #fff;
+      }
+
+      /* If style.css already sets nav-link colors, these will be overridden as needed */
+      @media (max-width: 768px) {
+        .hero {
+          padding-top: 6rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -59,7 +135,7 @@ The Compute Institute (TCi) has partnered with a government-aided SRM Arunachala
           </ul>
           <h2>Panayapatti Team</h2>
           <ul>
-            <li><strong>Teacher</strong>: Suthamathi</li>
+            <li><strong>Teacher</strong>: Vidhya</li>
             <li><strong>Headmaster</strong>: S. Anandhan</li>
           </ul>
 
