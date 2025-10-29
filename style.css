@@ -1,3 +1,4 @@
+
 :root{
 	/* Palette extracted from TCI logo */
 	--logo-light: #eef1f0; /* very light */
@@ -12,6 +13,57 @@
 	--radius:10px;
 	font-size:16px;
 }
+
+/* Banner behind the header (moved from inline <style>) */
+.page-top {
+  background-image: url('PHOTO-2025-10-03-07-31-33.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 180px; /* height of the top banner area */
+  position: relative;
+}
+
+/* Optional dark overlay so logo/nav contrast is maintained */
+.page-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.24);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep the header visually above the banner */
+.site-header {
+  background: transparent; /* let the banner show through */
+  position: relative;
+  z-index: 2; /* above the banner overlay */
+  padding: 20px 0;
+}
+
+/* Make brand and nav visually sit above overlay */
+.brand,
+.nav,
+.nav-toggle {
+  position: relative;
+  z-index: 3;
+}
+
+/* Improve visibility of brand text and nav links on top of the photo */
+.page-top .brand-text { color: #fff; font-weight: 600; }
+.page-top .nav-link { color: #fff; }
+
+/* Ensure the hero below is not affected */
+.hero { margin-top: 0; }
+
+/* Responsive tweaks for banner area */
+@media (max-width: 768px) {
+  .page-top { min-height: 140px; }
+  .brand-logo { max-height: 40px; }
+}
+
+/* --- existing stylesheet content --- */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -21,7 +73,6 @@ body{
 	-webkit-font-smoothing:antialiased;
 }
 .container{max-width:var(--max-width);margin:0 auto;padding:28px}
-.site-header{background:transparent;padding:20px 0}
 .header-inner{display:flex;align-items:center;gap:20px;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none}
 .brand-mark{background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:8px;border-radius:8px;font-weight:800}
