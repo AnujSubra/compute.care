@@ -1,395 +1,82 @@
+/* Basic reset and tokens */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Arial, Helvetica, sans-serif;color:#222}
+.container{max-width:1100px;margin:0 auto;padding:20px}
 
-:root{
-	/* Palette extracted from TCI logo */
-	--logo-light: #eef1f0; /* very light */
-	--accent: #038f6f;    /* primary green-teal */
-	--accent-2: #0c8c90;  /* secondary teal */
-	--accent-3: #de702b;  /* warm orange accent for highlights */
-	--bg: #126063;        /* deep teal background */
-	--card: #0b1620;      /* dark card background */
-	--muted: #97a8b0;     /* muted text */
-	--text: #eef1f0;      /* main text */
-	--max-width:1100px;
-	--radius:10px;
-	font-size:16px;
-}
+/* Header */
+.site-header{background:#fff;border-bottom:1px solid #ddd}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:60px;height:60px;object-fit:contain}
+.site-title{font-weight:600;font-size:20px}
+.main-nav a{margin:0 12px;color:#222;text-decoration:none}
+.donate-btn{background:#9b9b9b;color:#fff;border-radius:8px;padding:8px 14px;border:none}
 
-/* Banner behind the header (moved from inline <style>) */
-.page-top {
-  background-image: url('PHOTO-2025-10-03-07-31-33.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  min-height: 180px; /* height of the top banner area */
-  position: relative;
-}
+/* Hero */
+.hero{padding:30px 0}
+.hero-inner{display:flex;gap:30px;align-items:center}
+.hero-copy{flex:1}
+.accent-line{width:40px;height:4px;background:#ef8b3a;margin-bottom:12px}
+.hero-copy h1{font-size:28px;line-height:1.05;margin-bottom:14px}
+.hero-copy .lead{color:#444;margin-bottom:12px}
+.hero-actions{display:flex;align-items:center;gap:16px;margin-top:10px}
+.link-muted{color:#777;text-decoration:none}
+.cta{background:#9b9b9b;color:#fff;border:none;padding:10px 16px;border-radius:8px}
+.hero-image img{width:360px;height:360px;object-fit:cover;border-left:8px solid #fff}
 
-/* Optional dark overlay so logo/nav contrast is maintained */
-.page-top::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.24);
-  z-index: 1;
-  pointer-events: none;
-}
+/* Mission/Stats */
+.mission{background:#efefef;padding:36px 0}
+.section-title{text-align:center;margin-bottom:18px;font-weight:600}
+.stats{display:flex;gap:20px;justify-content:space-between;align-items:flex-start}
+.stat{flex:1;text-align:center}
+.stat-pill{background:#bfbfbf;color:#fff;width:90px;height:90px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:10px}
+.stat p{font-size:13px;color:#333}
 
-/* Keep the header visually above the banner */
-.site-header {
-  background: transparent; /* let the banner show through */
-  position: relative;
-  z-index: 2; /* above the banner overlay */
-  padding: 20px 0;
-}
+/* What we do cards */
+.what-we-do{padding:36px 20px}
+.cards{display:flex;gap:18px;margin-top:16px}
+.card{background:#e9e9e9;padding:22px;border-radius:4px;flex:1;text-align:center}
+.card h4{margin-bottom:10px}
+.card p{font-size:13px;color:#333}
 
-/* Make brand and nav visually sit above overlay */
-.brand,
-.nav,
-.nav-toggle {
-  position: relative;
-  z-index: 3;
-}
+/* Progress */
+.progress{display:flex;gap:30px;align-items:center;padding:36px 20px}
+.progress-left{flex:1}
+.progress-right{flex:1}
+.raised-amount{font-size:20px;font-weight:700;margin-bottom:8px}
+.goal{color:#666;margin-bottom:8px}
+.slider-wrap input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:14px;background:linear-gradient(90deg,#bfbfbf 0,#bfbfbf 100%);border-radius:12px;outline:none}
+.slider-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:32px;height:32px;background:#9b9b9b;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.2);cursor:pointer}
+/* Firefox */
+.slider-wrap input[type=range]::-moz-range-thumb{width:32px;height:32px;background:#9b9b9b;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.2);cursor:pointer}
 
-/* Improve visibility of brand text and nav links on top of the photo */
-.page-top .brand-text { color: #fff; font-weight: 600; }
-.page-top .nav-link { color: #fff; }
+/* Who we are */
+.who{display:flex;gap:20px;padding:36px 20px;align-items:center}
+.who-left{flex:1}
+.who-right img{width:260px;height:auto;object-fit:cover}
 
-/* Ensure the hero below is not affected */
-.hero { margin-top: 0; }
+/* Carousel / Faces */
+.faces{background:#e0e0e0;padding:28px 0}
+.faces .center{text-align:center}
+.carousel{position:relative;display:flex;align-items:center;justify-content:center;margin-top:18px}
+.carousel-track{display:flex;gap:12px;overflow:hidden;width:620px;height:200px;align-items:center;justify-content:center}
+.carousel-track img{width:520px;height:180px;object-fit:cover;border-radius:4px}
+.carousel-btn{position:absolute;background:none;border:none;font-size:36px;color:#111;cursor:pointer}
+.carousel-btn.prev{left:10px}
+.carousel-btn.next{right:10px}
+.carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.carousel-dots button{width:10px;height:10px;border-radius:50%;border:none;background:#c0c0c0}
 
-/* Responsive tweaks for banner area */
-@media (max-width: 768px) {
-  .page-top { min-height: 140px; }
-  .brand-logo { max-height: 40px; }
-}
+/* Footer */
+.site-footer{background:#ddd;padding:12px 0;margin-top:20px;text-align:center}
 
-/* --- existing stylesheet content --- */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-	margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-	background:linear-gradient(180deg,var(--bg) 0%, #071226 60%);
-	color:var(--text);
-	-webkit-font-smoothing:antialiased;
-}
-.container{max-width:var(--max-width);margin:0 auto;padding:28px}
-.header-inner{display:flex;align-items:center;gap:20px;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none}
-.brand-mark{background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:8px;border-radius:8px;font-weight:800}
-.brand-text{font-weight:700;color:var(--logo-light)}
-.nav{display:flex;gap:14px;align-items:center}
-.nav-link{color:var(--text);text-decoration:none;padding:8px;border-radius:6px}
-.nav-link:hover{background:rgba(255,255,255,0.02)}
-.nav-cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04202b;padding:8px 12px}
-.nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:20px}
-
-.hero{padding:72px 0 96px;background:linear-gradient(180deg,rgba(6,10,18,0.2),transparent);position:relative}
-.hero-title{font-size:36px;margin:0 0 12px}
-.hero-sub{color:var(--muted);margin:0 0 18px}
-.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);text-decoration:none}
-.brand-mark{background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:8px;border-radius:8px;font-weight:800}
-.brand-text{font-weight:700}
-.nav{display:flex;gap:14px;align-items:center}
-.nav-link{color:var(--text);text-decoration:none;padding:8px;border-radius:6px}
-.nav-link:hover{background:rgba(255,255,255,0.02)}
-.nav-cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04202b;padding:8px 12px}
-.nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:20px}
-
-.hero{padding:60px 0;background:linear-gradient(180deg,rgba(6,10,18,0.2),transparent)}
-.hero-title{font-size:36px;margin:0 0 12px}
-.hero-sub{color:var(--muted);margin:0 0 18px}
-.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);text-decoration:none}
-.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04202b; border:0}
-.btn-accent3{background:var(--accent-3);color:#fff;border:0}
-.hero-actions .btn{margin-right:10px}
-
-.brand-logo{height:96px;width:auto;border-radius:10px;box-shadow:0 8px 20px rgba(2,8,10,0.45)}
-.brand-text{font-size:20px;font-weight:800;letter-spacing:0.3px}
-.hero-actions .btn{margin-right:10px}
-
-.grid{display:grid;gap:18px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);} 
-.intro{
-	background:var(--card);
-	padding:36px 28px;
-	border-radius:14px;
-	margin-top:36px;
-	box-shadow:0 12px 30px rgba(3,12,18,0.45);
-}
-
-.about{margin-top:48px;position:relative;z-index:2}
-.about .card{background:var(--card);color:var(--text);box-shadow:0 12px 30px rgba(3,12,18,0.45)}
-.card h3{margin-top:0}
-
-.events-list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:12px}
-.events-list li{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:8px;background:rgba(255,255,255,0.01)}
-.section-header{display:flex;justify-content:space-between;align-items:center}
-
-.newsletter{margin:36px auto 48px;text-align:center;background:var(--card);padding:28px;border-radius:12px;box-shadow:0 10px 24px rgba(3,12,18,0.35);max-width:var(--max-width);width:calc(100% - 56px)}
-.form-inline{display:flex;gap:8px;justify-content:center;align-items:center}
-.form-inline input[type=email]{flex:0 1 360px;max-width:70%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
-.form-inline button{flex:0 0 auto}
-.muted{color:var(--muted)}
-.small{font-size:13px}
-
-.site-footer{background:linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.12));padding:28px 0;margin-top:48px;border-top:0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.footer-nav a{color:var(--muted);text-decoration:none;margin-left:12px}
-
+/* Responsive */
 @media (max-width:900px){
-	.grid-3{grid-template-columns:1fr}
-	.nav{position:absolute;right:18px;top:66px;background:rgba(5,8,12,0.7);padding:12px;border-radius:10px;flex-direction:column;display:none}
-	.nav.open{display:flex}
-	.nav-toggle{display:block}
-	.container{padding:18px}
-	.hero-title{font-size:26px}
-
-	/* stack the subscribe form on narrow screens */
-	.form-inline{flex-direction:column;gap:10px}
-	.form-inline input[type=email]{max-width:100%;width:100%}
-
-	/* scale down logo on small screens so header remains compact */
-	.brand-logo{height:56px}
-	.brand-text{font-size:16px}
+	.hero-inner{flex-direction:column}
+	.hero-image img{width:100%;height:220px}
+	.stats{flex-direction:column;gap:16px}
+	.cards{flex-direction:column}
+	.who{flex-direction:column}
+	.carousel-track{width:100%;height:180px}
+	.carousel-track img{width:100%;height:180px}
 }
-.event-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  margin-top: 2em;
-}
-
-.event-images figure {
-  flex: 1 1 350px;
-  max-width: 350px;
-}
-
-.event-photo {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-/* simple utility classes */
-.link-muted{color:var(--accent-2);text-decoration:none}
-/* ...existing styles... */
-
-/* Stylish Contact Form */
-.contact-section {
-  max-width: 600px;
-  margin: 48px auto;
-  background: var(--card);
-  box-shadow: 0 10px 24px rgba(3,12,18,0.35);
-  border-radius: 18px;
-  padding: 36px 36px 28px 36px;
-}
-.contact-section h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-.contact-form {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.contact-form label {
-  font-weight: 600;
-  color: var(--accent-2);
-}
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.07);
-  background: rgba(255,255,255,0.04);
-  color: var(--text);
-  font-size: 1em;
-  margin-top: 2px;
-  resize: vertical;
-}
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  border-color: var(--accent-2);
-  outline: none;
-  background: rgba(255,255,255,0.08);
-}
-.contact-form button {
-  align-self: flex-start;
-  min-width: 140px;
-  margin-top: 12px;
-}
-.form-success {
-  color: var(--accent);
-  margin-top: 16px;
-  font-weight: 600;
-}
-.form-error {
-  color: var(--accent-3);
-  margin-top: 16px;
-  font-weight: 600;
-}
-.contact-alt {
-  margin-top: 30px;
-  text-align: center;
-}
-@media (max-width:700px){
-  .contact-section { padding: 24px 12px; }
-}
-
-/* Accessible and visible link styles applied site-wide */
-a {
-  color: var(--accent-2);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(255,255,255,0.14); /* subtle on dark bg */
-}
-
-a:visited {
-  color: var(--muted);
-  text-decoration-color: rgba(255,255,255,0.08);
-}
-
-a:hover,
- a:focus {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-  outline: 3px solid rgba(12,140,144,0.14); /* subtle focus ring */
-  outline-offset: 3px;
-}
-
-/* Keep nav links highly readable but still indicate link state with a subtle underline */
-.nav-link,
-.footer-nav a {
-  color: var(--text);
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,0.04);
-  text-underline-offset: 4px;
-}
-
-.nav-link:hover,
-.footer-nav a:hover,
-.nav-link:focus,
-.footer-nav a:focus {
-  color: var(--text);
-  text-decoration-color: rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.02);
-  outline: none;
-}
-
-/* Utility: force underline when using link-muted class */
-.link-muted { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.12); color: var(--accent-2); }
-/* Existing styles kept; add/replace the sections below or merge as needed */
-
-/* --- Carousel & image sizing styles --- */
-.carousel {
-  position: relative;
-  margin: 1.5rem 0;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.carousel-viewport {
-  overflow: hidden;
-  width: 100%;
-  border-radius: 8px;
-  background: #f6f6f6;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 400ms ease;
-  will-change: transform;
-}
-
-/* Each slide occupies full viewport width */
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-}
-
-/* Force a consistent visual size for all event images */
-.carousel-img,
-.event-photo {
-  width: 100%;
-  /* caps the visual width; adjust as needed */
-  max-width: 900px;
-  /* fixed visual height so all images are same size */
-  height: 360px;
-  object-fit: cover; /* center-crop to preserve aspect ratio */
-  display: block;
-  border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* Buttons */
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 4;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(0,0,0,0.06);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-button.prev { left: 12px; }
-.carousel-button.next { right: 12px; }
-
-/* Dots */
-.carousel-dots {
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  margin-top:12px;
-}
-
-.carousel-dot {
-  width:10px;
-  height:10px;
-  background:#d0d0d0;
-  border-radius:50%;
-  cursor:pointer;
-  border: none;
-}
-
-.carousel-dot[aria-selected="true"],
-.carousel-dot:focus {
-  background:#333;
-  outline: none;
-}
-
-/* Small screens adjustments */
-@media (max-width: 600px) {
-  .carousel-img,
-  .event-photo { height: 220px; }
-  .carousel-button { width:36px; height:36px; }
-}
-
-/* keep your other styles below or above as needed */
-/* End of file */
