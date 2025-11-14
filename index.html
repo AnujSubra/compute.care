@@ -1,124 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Compute Initiative — Home</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="The Compute Initiative — community, events, and research support for computational projects." />
-  </head>
-  <body>
-    <!-- page-top contains the photo background that appears behind the logo + nav only -->
-    <div class="page-top">
-      <header class="site-header">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Compute Initiative</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
         <div class="container header-inner">
-          <a class="brand" href="index.html">
-            <img src="TCI%20logo%20Sep%202025.png" alt="The Compute Initiative logo" class="brand-logo" />
-            <span class="brand-text">The Compute Initiative</span>
-          </a>
-          <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-          <nav class="nav" id="mainNav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="events.html" class="nav-link">Events</a>
-            <a href="donate.html" class="nav-link nav-cta">Donate</a>
-            <a href="contact.html" class="nav-link">Contact Us</a>
-          </nav>
+            <div class="logo">
+                <img src="images/TCI%20logo%20Sep%202025.png" alt="logo">
+                <span class="site-title">The Compute Initiative</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#events">Events</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+            <div class="donate">
+                <button class="donate-btn">Donate</button>
+            </div>
         </div>
-      </header>
-    </div>
+    </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">Igniting Young Minds Through Technology</h1>
-          <p class="hero-sub">Talent is everywhere, but opportunity isn't. In the villages of Tamil Nadu, bright high school students are being left behind in the digital age. The Compute Initiative's primary objective is to address this gap. We bring technology access directly into their hands and connect them with mentors who can guide them. It’s about more than skills—it’s about showing these students they have the power to create, dream bigger, and open doors they never knew existed. Our mission is to make the benefits of the digital age accessible to those without daily access, fostering personal empowerment and preparing them for future career opportunities.</p>
-          <p class="hero-actions">
-              <a class="btn btn-primary" href="events.html">See Events</a>
-              <a class="btn btn-accent3" href="donate.html">Support us</a>
-          </p>
-        </div>
-      </section>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <div class="accent-line"></div>
+                    <h1>Igniting Young Minds Through <br>Technology.</h1>
+                    <p class="lead">Talent is everywhere, but opportunity isn't. In the villages of Tamil Nadu, bright high school students are being left behind in the digital age.</p>
+                    <p>The Compute Initiative works to close this gap by providing computers, internet access, and guidance to students who need them most. It’s about more than access to technology, it’s about showing these students they have the power to dream bigger!</p>
+                    <div class="hero-actions">
+                        <a class="link-muted" href="#impact">See our Impact</a>
+                        <button class="cta">Support Us</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/Screenshot 2025-11-09 at 5.00.24 PM.png" alt="students at computers">
+                </div>
+            </div>
+        </section>
 
-      <section class="about container">
-        <div class="card">
-          <h1>About The First Compute Initiative: SRM Arunachalam Higher Secondary School, Panayapatti </h1>
-          <p>
-The Compute Institute (TCi) has partnered with a government-aided SRM Arunachalam Higher Secondary School in Panayapatti (Pudukottai District) to empower rural young students by introducing Computer Science as a standard subject for grades 6 through 9. TCi will donate computers and provide ongoing support with a dedicated curriculum and teaching staff, enabling students to develop essential skills in modern technology, including responsible AI learning through strong collaboration with local volunteers and educators.
-</p>
-          
-          <h2>Team</h2>
-          <ul>
-            <li><strong>Co-Founder</strong> — Anish Subramanian</li>
-            <li><strong>Co-Founder</strong> — Anuj Subramanian</li>
-            <li><strong>Secretary</strong>: M. Muthukumar (Local Volunteer)</li>
-            
-          </ul>
-          <h2><a href="https://thanjavur.thamaraischools.org/academics/teaching-staff">Education Partner - Thamarai Schools International</a></h2>
-          <ul>
-            <li><strong>Technology Support/Admin</strong>: Dhamodharan (Local Volunteer)</li>
-            <li><strong>Tutoring Partner</strong>: Ms. S. Praveena (Thamarai School Vice Principal and Local Volunteer)</li>
-          </ul>
-          <h2>Panayapatti Team</h2>
-          <ul>
-            <li><strong>Teacher</strong>: Vidhya</li>
-            <li><strong>Headmaster</strong>: S. Anandhan</li>
-          </ul>
+        <section class="mission">
+            <div class="container">
+                <h2 class="section-title">Why This <span class="muted">Mission</span> Matters</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-pill">47%</div>
+                        <p>of the population in Tamil Nadu don't access the internet</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-pill">1 in 3</div>
+                        <p>rural students in Tamil Nadu don't have a smartphone</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-pill">&lt;4.2%</div>
+                        <p>of rural households in India have a computer at home.</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-pill">18%</div>
+                        <p>of govt. schools in Tamil Nadu have internet facilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <h2>Get involved</h2>
-          <p>We welcome volunteers, sponsors, and collaborators. Check the events page for upcoming opportunities, or <a href="contact.html">contact us</a> via the mailing list.</p>
-        </div>
-      </section>
-      <section>
-        <img src = "PHOTO-2025-10-02-09-50-40.jpg" class = "event-photo"> 
-      </section>
+        <section class="what-we-do container">
+            <h3>What We Do</h3>
+            <div class="cards">
+                <article class="card">
+                    <h4>Education</h4>
+                    <p>We introduce computer education to rural classrooms; covering basic digital literacy, safe internet practices, and coding fundamentals.</p>
+                </article>
+                <article class="card">
+                    <h4>Resources</h4>
+                    <p>We provide schools with the essential infrastructure they need: computers, power backup, and ongoing technical support.</p>
+                </article>
+                <article class="card">
+                    <h4>Events</h4>
+                    <p>We organize workshops and programs that connect students with professionals who can inspire and guide their learning journey.</p>
+                </article>
+            </div>
+        </section>
 
-      <section class="intro container">
-        <h2>What we do</h2>
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>Education</h3>
-            <p>Key Learning Areas for students:
+        <section class="progress container">
+            <div class="progress-left">
+                <h3>Our <span class="muted">Progress</span> So Far</h3>
+                <p>Each donation turns into real change—a computer in a classroom, a student discovering what's possible.</p>
+                <button class="secondary">Lean More</button>
+            </div>
+            <div class="progress-right">
+                <div class="raised-amount">$<span id="raised-display">2500</span> raised</div>
+                <div class="goal">$4000 goal</div>
+                <div class="slider-wrap">
+                    <input id="donation-range" type="range" min="0" max="40000" value="25000">
+                </div>
+            </div>
+        </section>
 
-Computer Fundamentals: Understanding hardware, operating systems, and safe internet practices.
-Introduction to Programming: Learning the fundamentals of coding using Python, a versatile and beginner-friendly language.
-Project-Based Learning: Applying learned concepts to create a small, functional application.
-</p>
-          </article>
-          <article class="card">
-            <h3>Resources</h3>
-            <p>Provides desktops and power supply to students for hands on learning.</p>
-          </article>
-          <article class="card">
-            <h3>Events</h3>
-            <p>Workshops, functions, and seminars focused on developing a connection with computation and technology.</p>
-          </article>
-        </div>
-      </section>
+        <section id="about" class="who container">
+            <div class="who-left">
+                <h3>Who We Are</h3>
+                <p>The Compute Initiative (TCi) was founded by Anish Subramanian and Anuj Subramanian to bring digital learning opportunities to rural Tamil Nadu.</p>
+                <p>In partnership with local schools, TCI works with educators and volunteers to make computer education part of everyday classroom learning.</p>
+            </div>
+            <div class="who-right">
+                <img src="images/PHOTO-2025-10-12-08-34-48.jpg" alt="poster">
+            </div>
+        </section>
 
-  <!-- Events removed per request -->
-
-      <!-- Contact section removed; now on contact.html -->
-
+        <section class="faces">
+            <div class="container">
+                <h3>Faces of <span class="muted">Change</span></h3>
+                <p class="center small">Meet the students, teachers, and community members shaping the story of The Compute Initiative.</p>
+                <div class="carousel" id="carousel">
+                    <button class="carousel-btn prev" data-action="prev">‹</button>
+                    <div class="carousel-track">
+                        <img src="images/Panayapatti school inaguration class (1).jpg" alt="slide 1">
+                        <img src="images/Panayapatti computers install1.jpg" alt="slide 2">
+                        <img src="images/PHOTO-2025-10-03-07-31-33 (1).jpg" alt="slide 3">
+                        <img src="images/PHOTO-2025-10-02-09-50-40 (1).jpg" alt="slide 4">
+                    </div>
+                    <button class="carousel-btn next" data-action="next">›</button>
+                    <div class="carousel-dots" id="carousel-dots"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>The Compute Initiative</strong>
-          <p class="muted small">Advancing equitable access to computational resources.</p>
-        </div>
-        <nav class="footer-nav">
-          <a href="events.html">Events</a>
-          <a href="donate.html">Donate</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
-      </div>
+        <div class="container">Footer</div>
     </footer>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
-
-
