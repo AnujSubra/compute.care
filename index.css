@@ -64,14 +64,14 @@ html,body{height:100%;font-family:Arial, Helvetica, sans-serif;color:#222}
 /* Carousel / Faces */
 .faces{background:#e0e0e0;padding:28px 0}
 .faces .center{text-align:center}
-.carousel{position:relative;display:flex;align-items:center;justify-content:center;margin-top:18px}
-.carousel-track{display:flex;gap:12px;overflow:hidden;width:100%;max-width:900px;height:240px;align-items:center;justify-content:center}
-.carousel-track img{width:100%;max-width:740px;height:220px;object-fit:cover;border-radius:4px}
-.carousel-btn{position:absolute;background:none;border:none;font-size:36px;color:#111;cursor:pointer}
+.carousel2{position:relative;display:flex;align-items:center;justify-content:center;margin-top:18px}
+.carousel-track2{display:flex;gap:12px;overflow:hidden;width:100%;max-width:900px;height:240px;align-items:center;justify-content:center}
+.carousel-track2 img{width:100%;max-width:740px;height:220px;object-fit:cover;border-radius:4px}
+.carousel-btn2{position:absolute;background:none;border:none;font-size:36px;color:#111;cursor:pointer}
 .carousel-btn.prev{left:10px}
 .carousel-btn.next{right:10px}
-.carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:10px}
-.carousel-dots button{width:10px;height:10px;border-radius:50%;border:none;background:#c0c0c0}
+.carousel-dots2{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.carousel-dots2 button{width:10px;height:10px;border-radius:50%;border:none;background:#c0c0c0}
 
 /* Footer */
 .site-footer{background:#ddd;padding:12px 0;margin-top:20px;text-align:center}
