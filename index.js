@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function(){
 	// Simple carousel
 	const track = document.querySelector('.carousel-track');
 	const slides = track ? Array.from(track.children) : [];
-	const prevBtn = document.querySelector('.carousel-btn.prev');
-	const nextBtn = document.querySelector('.carousel-btn.next');
-	const dotsWrap = document.getElementById('carousel-dots');
+	const prevBtn = document.querySelector('.carousel-btn.prev2');
+	const nextBtn = document.querySelector('.carousel-btn.next2');
+	const dotsWrap = document.getElementById('carousel-dots2');
 	let index = 0;
 
 	function render(){
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	// autoplay
 	let autoplay = setInterval(()=>{ index = (index+1)%slides.length; render(); }, 4000);
-	const carousel = document.getElementById('carousel');
+	const carousel = document.getElementById('carousel2');
 	if(carousel){
 		carousel.addEventListener('mouseenter', ()=> clearInterval(autoplay));
 		carousel.addEventListener('mouseleave', ()=> autoplay = setInterval(()=>{ index = (index+1)%slides.length; render(); }, 4000));
