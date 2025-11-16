@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // in the carousel keep them here; if they are also added to extraImages remove from either list
   const existingImages = [
     "Panayapatti inaguration invitation 2.jpg",
-    "Panayapatti school inaguration class.jpg"
+    "Panayapatti school inaguration class (1).jpg"
   ];
 
   const images = [...existingImages, ...extraImages];
