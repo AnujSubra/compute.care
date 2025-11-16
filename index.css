@@ -13,16 +13,22 @@ html,body{height:100%;font-family:Arial, Helvetica, sans-serif;color:#222}
 .donate-btn{background:#9b9b9b;color:#fff;border-radius:8px;padding:8px 14px;border:none}
 
 /* Hero */
-.hero{padding:30px 0}
-.hero-inner{display:flex;gap:30px;align-items:center}
-.hero-copy{flex:1}
+.hero{padding:40px 0}
+.hero-inner{display:flex;gap:30px;align-items:stretch}
+.hero-copy{flex:1;min-width:300px}
 .accent-line{width:40px;height:4px;background:#ef8b3a;margin-bottom:12px}
 .hero-copy h1{font-size:28px;line-height:1.05;margin-bottom:14px}
 .hero-copy .lead{color:#444;margin-bottom:12px}
 .hero-actions{display:flex;align-items:center;gap:16px;margin-top:10px}
 .link-muted{color:#777;text-decoration:none}
 .cta{background:#9b9b9b;color:#fff;border:none;padding:10px 16px;border-radius:8px}
-.hero-image img{width:360px;height:360px;object-fit:cover;border-left:8px solid #fff}
+.hero-image{flex:1;display:flex;align-items:center;justify-content:center}
+.hero-image img{width:100%;max-width:680px;height:auto;object-fit:cover;border-radius:4px}
+
+/* Ensure hero looks tall on wide screens */
+@media(min-width:1000px){
+	.hero-image img{height:480px;width:auto;max-width:720px}
+}
 
 /* Mission/Stats */
 .mission{background:#efefef;padding:36px 0}
@@ -59,8 +65,8 @@ html,body{height:100%;font-family:Arial, Helvetica, sans-serif;color:#222}
 .faces{background:#e0e0e0;padding:28px 0}
 .faces .center{text-align:center}
 .carousel{position:relative;display:flex;align-items:center;justify-content:center;margin-top:18px}
-.carousel-track{display:flex;gap:12px;overflow:hidden;width:620px;height:200px;align-items:center;justify-content:center}
-.carousel-track img{width:520px;height:180px;object-fit:cover;border-radius:4px}
+.carousel-track{display:flex;gap:12px;overflow:hidden;width:100%;max-width:900px;height:240px;align-items:center;justify-content:center}
+.carousel-track img{width:100%;max-width:740px;height:220px;object-fit:cover;border-radius:4px}
 .carousel-btn{position:absolute;background:none;border:none;font-size:36px;color:#111;cursor:pointer}
 .carousel-btn.prev{left:10px}
 .carousel-btn.next{right:10px}
