@@ -122,14 +122,14 @@ body {
   left: 0;
   height: 379px;
   background-color: var(--collection-1-color-background-surface);
-  width: 1440px;
+  width: 100%;
   display: flex;
 }
 
 .desktop .frame-2 {
   display: flex;
   margin-top: 98px;
-  width: 1096px;
+  width: 75%;
   height: 225px;
   margin-left: 184px;
   position: relative;
