@@ -106,6 +106,24 @@ body {
   white-space: nowrap;
   font-style: var(--font-button-primary-font-style);
 }
+.nav-link {
+  text-decoration: none;
+  font-family: var(--font-heading-m-font-family);
+  font-weight: var(--font-heading-m-font-weight);
+  font-size: var(--font-heading-m-font-size);
+  color: var(--collection-1-color-text-primary);
+  letter-spacing: var(--font-heading-m-letter-spacing);
+  line-height: var(--font-heading-m-line-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional hover effect */
+.nav-link:hover {
+  opacity: 0.8;
+}
+
 .desktop .group-2 {
   z-index: 1;
   position: relative;
@@ -816,4 +834,10 @@ body {
 .desktop .section-2,
 .desktop .group-2 {
   box-sizing: border-box;
+}
+
+.button-l,
+.button-l a,
+.button-l .buttons {
+  text-decoration: none !important;
 }
