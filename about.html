@@ -4,58 +4,109 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About — The Compute Initiative</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Use the same CSS stack as index.html -->
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">
-          <img src="TCI%20logo%20Sep%202025.png" alt="The Compute Initiative logo" class="brand-logo" />
-          <span class="brand-text">The Compute Initiative</span>
-        </a>
-        <button id="navToggle2" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="nav" id="mainNav2">
+    <div class="desktop">
+      <!-- HEADER: same structure / branding as home -->
+      <header class="header">
+        <div class="group"></div>
+        <div class="text-wrapper">The Compute Institute</div>
+        <div class="frame">
           <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
           <a href="events.html" class="nav-link">Events</a>
-          <a href="donate.html" class="nav-link nav-cta">Donate</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="card">
-        <h1>About The Compute Initiative</h1>
-        <p>A partnership between The Compute Institute (TCI), a non-profit initiative, SM.S ARUNHACHALAM HIGH SCHOOL, and the Panayapatti community.</p>
-        <h2>Our mission</h2>
-        <p>Talent is everywhere, but opportunity isn't. In the villages of Tamil Nadu, bright high school students are being left behind in the digital age. The Compute Initiative's primary objective is to address this gap. We bring technology access directly into their hands and connect them with mentors who can guide them. It’s about more than skills—it’s about showing these students they have the power to create, dream bigger, and open doors they never knew existed. Our mission is to make the benefits of the digital age accessible to those without daily access, fostering personal empowerment and preparing them for future career opportunities.</p>
-
-        <h2>Team</h2>
-        <ul>
-          <li>Co-Founder — Anish Subramanian</li>
-          <li>Co-Founder — Anuj Subramanian</li>
-          
-        </ul>
-
-        <h2>Get involved</h2>
-        <p></p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>The Compute Initiative</strong>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+          <a href="donate.html" class="button-l">
+            <div class="buttons">Donate</div>
+          </a>
         </div>
-        <nav class="footer-nav">
-          <a href="about.html">About</a>
-          <a href="events.html">Events</a>
-          <a href="donate.html">Donate</a>
-        </nav>
-      </div>
-    </footer>
+      </header>
 
-    <script src="script.js"></script>
+      <!-- MAIN ABOUT CONTENT -->
+      <main class="about-main">
+        <!-- Simple hero line for About page -->
+        <section class="about-hero">
+          
+          
+        </section>
+
+        <!-- Card-style content area that keeps ALL your about.html content -->
+        <section class="about-card">
+          <h1 class="about-title">About The Compute Initiative</h1>
+
+          <p class="about-body">
+            A partnership between The Compute Institute (TCI), a non-profit initiative,
+            SM.S ARUNHACHALAM HIGH SCHOOL, and the Panayapatti community.
+          </p>
+
+          <h2 class="about-heading">Our mission</h2>
+          <p class="about-body">
+            Talent is everywhere, but opportunity isn't. In the villages of Tamil Nadu, bright high school students
+            are being left behind in the digital age. The Compute Initiative's primary objective is to address this gap.
+            We bring technology access directly into their hands and connect them with mentors who can guide them.
+            It’s about more than skills—it’s about showing these students they have the power to create, dream bigger,
+            and open doors they never knew existed. Our mission is to make the benefits of the digital age accessible
+            to those without daily access, fostering personal empowerment and preparing them for future career
+            opportunities.
+          </p>
+
+          <div class="about-columns">
+            <div>
+              <h2 class="about-heading">Team</h2>
+              <ul class="about-list">
+                <li>Co-Founder — Anish Subramanian</li>
+                <li>Co-Founder — Anuj Subramanian</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="about-heading">Partners</h2>
+              <ul class="about-list">
+                <li>SRM Arunachalam Higher Secondary School, Panayapatti</li>
+                <li>Thamarai Schools International</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER: same as on home page -->
+      <footer class="footer">
+        <div class="frame-12">
+          <div class="group-5">
+            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
+            <img
+              class="TCI-logo-sep"
+              src="TCI logo Sep 2025.png"
+              alt="The Compute Initiative logo"
+            />
+          </div>
+          <p class="talent-is-everywhere">
+            Talent is everywhere, but opportunity isn’t. In the villages of Tamil Nadu, bright high school
+            students are being left behind in the digital age.<br /><br />
+            The Compute Initiative works to close this gap by providing computers, internet access, and guidance
+            to students who need them most. It’s about more than access to technology, it’s about showing these
+            students they have the power to dream bigger!
+          </p>
+        </div>
+        <div class="frame-13">
+          <div class="text-wrapper-13">Main Menu</div>
+          <div class="home-events-about-us">
+            Home<br /><br />Events<br /><br />About Us<br /><br />Contact Us<br /><br />Donate Now
+          </div>
+        </div>
+        <div class="frame-14">
+          <div class="text-wrapper-13">Connect With Us</div>
+          <div class="frame-15">
+            <!-- Social icons/links could go here -->
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
