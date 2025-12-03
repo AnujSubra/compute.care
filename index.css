@@ -918,3 +918,117 @@ body {
   font-size: var(--font-body-m-font-size);
   color: var(--collection-1-color-text-primary);
 }
+
+/* DONATE PAGE LAYOUT
+   ---------------------------------------- */
+/* DONATE PAGE LAYOUT */
+/* DONATE PAGE LAYOUT
+   ---------------------------------------- */
+
+.donate-main {
+  margin-top: 120px; /* sits below header */
+  padding: 56px 182px 80px;
+  box-sizing: border-box;
+  background-color: var(--collection-1-color-background-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* HERO (no random background image, just brand color) */
+.donate-hero {
+  text-align: center;
+  padding: 60px 24px 40px;
+  background-color: var(--collection-1-color-brand-secondary);
+  color: var(--collection-1-color-text-onprimary);
+  border-radius: 16px;
+  box-shadow: 0px 8px 4px #11445c33;
+}
+
+.donate-hero-title {
+  font-family: var(--font-heading-l-font-family);
+  font-weight: var(--font-heading-l-font-weight);
+  font-size: var(--font-heading-l-font-size);
+  letter-spacing: var(--font-heading-l-letter-spacing);
+  line-height: var(--font-heading-l-line-height);
+  color: var(--collection-1-color-background-surface);
+  margin-top: 8px;
+}
+
+/* BIG DONATE CTA SECTION */
+.donate-cta-section {
+  background-color: var(--collection-1-color-brand-primary);
+  padding: 32px 24px;
+  border-radius: 16px;
+  text-align: center;
+  color: var(--collection-1-color-text-onprimary);
+  box-shadow: 0px 6px 3px #11445c33;
+}
+
+.donate-cta-text {
+  font-family: var(--font-body-m-font-family);
+  font-weight: var(--font-body-m-font-weight);
+  font-size: var(--font-body-m-font-size);
+  letter-spacing: var(--font-body-m-letter-spacing);
+  line-height: var(--font-body-m-line-height);
+  margin-bottom: 20px;
+}
+
+/* REUSABLE PRIMARY BUTTON (used for both Donate Now buttons) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 16px;
+  background-color: #e76c2e;
+  color: var(--collection-1-color-text-onprimary);
+  font-family: var(--font-button-primary-font-family);
+  font-weight: var(--font-button-primary-font-weight);
+  font-size: var(--font-button-primary-font-size);
+  letter-spacing: var(--font-button-primary-letter-spacing);
+  line-height: var(--font-button-primary-line-height);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* MAIN DONATE CONTENT CARD */
+.donate-card {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 32px 48px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 8px 4px #11445c33;
+  text-align: left;
+}
+
+.donate-card h1,
+.donate-card h2 {
+  font-family: var(--font-heading-m-font-family);
+  font-weight: var(--font-heading-m-font-weight);
+  font-size: var(--font-heading-m-font-size);
+  color: var(--collection-1-color-text-primary);
+  margin-top: 0;
+}
+
+.donate-card p {
+  font-family: var(--font-body-m-font-family);
+  font-weight: var(--font-body-m-font-weight);
+  font-size: var(--font-body-m-font-size);
+  letter-spacing: var(--font-body-m-letter-spacing);
+  line-height: var(--font-body-m-line-height);
+  color: var(--collection-1-color-text-primary);
+}
+
+/* GofundMe promo inside the card */
+.gofundme-promo {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}

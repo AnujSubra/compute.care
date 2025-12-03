@@ -4,110 +4,111 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Donate — The Compute Initiative</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Stylized GoFundMe promotion section */
-      .gofundme-promo {
-        background: linear-gradient(90deg, #38ef7d 0%, #11998e 100%);
-        color: white;
-        border-radius: 1.2em;
-        padding: 2em 1em;
-        margin: 2em 0;
-        text-align: center;
-        box-shadow: 0 4px 16px rgba(17,153,142,0.12);
-      }
-      .gofundme-promo h2 {
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 0.4em;
-        letter-spacing: 0.03em;
-      }
-      .gofundme-promo p {
-        font-size: 1.15em;
-        margin-bottom: 1em;
-      }
-      .gofundme-btn {
-        display: inline-block;
-        background: #fff;
-        color: #11998e;
-        font-weight: 600;
-        padding: 0.85em 2em;
-        font-size: 1.1em;
-        border-radius: 2em;
-        box-shadow: 0 2px 8px rgba(56,239,125,0.1);
-        text-decoration: none;
-        transition: background 0.2s, color 0.2s;
-      }
-      .gofundme-btn:hover, .gofundme-btn:focus {
-        background: #11998e;
-        color: #fff;
-        box-shadow: 0 4px 16px rgba(17,153,142,0.15);
-      }
-      .gofundme-promo .gfm-logo {
-        vertical-align: middle;
-        width: 40px;
-        margin-right: 0.45em;
-        margin-bottom: 0.15em;
-      }
-    </style>
+
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
+
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">
-          <img src="TCI%20logo%20Sep%202025.png" alt="The Compute Initiative logo" class="brand-logo" />
-          <span class="brand-text">The Compute Initiative</span>
-        </a>
-        <button id="navToggle4" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="nav" id="mainNav4">
+    <div class="desktop">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div class="group"></div>
+        <div class="text-wrapper">The Compute Institute</div>
+        <div class="frame">
           <a href="index.html" class="nav-link">Home</a>
           <a href="events.html" class="nav-link">Events</a>
-          <a href="donate.html" class="nav-link nav-cta">Donate</a>
+          <a href="about.html" class="nav-link">About Us</a>
           <a href="contact.html" class="nav-link">Contact Us</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="card">
-        <h1>Support our work</h1>
-        <p>Your donations help fund education, devices, and the initiative.</p>
-        
-
-        <!-- GOFUNDME PROMO SECTION -->
-        <div class="gofundme-promo">
-          <h2>
-            
-            Support us on GoFundMe!
-          </h2>
-          <p>
-            Every dollar you donate brings us closer to our goal of creating real impact in our community.<br>
-            Help us fund devices, education, and future opportunities. Your donations help to procure computer devices, support dedicated teaching staff and drice the entire community initative forward.<br>
-            <strong>Be part of the change — donate today!</strong>
-          </p>
-          <a href="https://gofund.me/e507a041f" class="gofundme-btn" target="_blank" rel="noopener">
-            Donate Now
+          <a href="donate.html" class="button-l">
+            <div class="buttons">Donate</div>
           </a>
         </div>
-        <!-- END GOFUNDME PROMO SECTION -->
+      </header>
 
-      </section>
-    </main>
+      <!-- MAIN DONATE CONTENT -->
+      <main class="donate-main">
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>The Compute Initiative</strong>
+        <!-- HERO -->
+        <section class="donate-hero">
+          <p class="text-wrapper-4">Igniting Young Minds Through Technology</p>
+          <div class="donate-hero-title">Support The Compute Initiative</div>
+        </section>
+
+        <!-- LARGE DONATE CTA SECTION -->
+        <section class="donate-cta-section">
+          <p class="donate-cta-text">
+            Your donation helps us provide computers, internet access, and learning opportunities
+            to underserved students in rural Tamil Nadu.
+          </p>
+
+          <!-- PRIMARY DONATE BUTTON -->
+          <a href="https://gofund.me/e507a041f"
+             class="btn-primary"
+             target="_blank"
+             rel="noopener">
+            Donate Now
+          </a>
+        </section>
+
+        <!-- MAIN CARD WITH YOUR EXISTING DONATE CONTENT -->
+        <section class="donate-card">
+          <h1>Support our work</h1>
+          <p>
+            Your donations help fund education, devices, and the initiative.
+          </p>
+
+          <div class="gofundme-promo">
+            <h2>Support us on GoFundMe!</h2>
+            <p>
+              Every dollar you donate brings us closer to our goal of creating real impact in our community.
+              Help us fund devices, education, and future opportunities. Your donations help to procure
+              computer devices, support dedicated teaching staff and drive the entire community initiative forward.
+              <strong>Be part of the change — donate today!</strong>
+            </p>
+
+            <!-- SECONDARY BUT MATCHING BUTTON -->
+            <a href="https://gofund.me/e507a041f"
+               class="btn-primary"
+               target="_blank"
+               rel="noopener">
+              Donate Now
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="frame-12">
+          <div class="group-5">
+            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
+            <img class="TCI-logo-sep" src="TCI logo Sep 2025.png" alt="The Compute Initiative logo" />
+          </div>
+          <p class="talent-is-everywhere">
+            Talent is everywhere, but opportunity isn’t. In the villages of Tamil Nadu, bright high school
+            students are being left behind in the digital age.<br /><br />
+            The Compute Initiative works to close this gap by providing computers, internet access, and guidance
+            to students who need them most. It’s about more than access to technology, it’s about showing these
+            students they have the power to dream bigger!
+          </p>
         </div>
-        <nav class="footer-nav">
-          <a href="events.html">Events</a>
-          <a href="donate.html">Donate</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
-      </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="frame-13">
+          <div class="text-wrapper-13">Main Menu</div>
+          <div class="home-events-about-us">
+            Home<br /><br />Events<br /><br />About Us<br /><br />Contact Us<br /><br />Donate Now
+          </div>
+        </div>
+
+        <div class="frame-14">
+          <div class="text-wrapper-13">Connect With Us</div>
+          <div class="frame-15"></div>
+        </div>
+      </footer>
+
+    </div>
   </body>
 </html>
