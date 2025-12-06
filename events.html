@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -37,7 +37,7 @@
           </p>
         </div>
 
-        <!-- Carousel: will be populated by script.js -->
+        
         <div class="carousel" aria-roledescription="carousel" aria-label="Event photos">
           <button class="carousel-button prev" aria-label="Previous slide">&lt;</button>
           <div class="carousel-viewport">
@@ -64,5 +64,169 @@
     </footer>
 
     <script src="script.js"></script>
+  </body>
+</html> -->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Events — The Compute Initiative</title>
+
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="desktop">
+
+      <!-- HEADER (same as other pages) -->
+      <header class="header">
+        <div class="group"></div>
+        <div class="text-wrapper">The Compute Institute</div>
+        <div class="frame">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+          <a href="donate.html" class="button-l">
+            <div class="buttons">Donate</div>
+          </a>
+        </div>
+      </header>
+
+      <!-- MAIN EVENTS CONTENT -->
+      <main class="events-main">
+
+        <!-- HERO -->
+        <section class="events-hero">
+          
+          <div class="events-hero-title">Events &amp; Milestones</div>
+        </section>
+
+        <!-- EVENTS COPY CARD — paste your existing text here -->
+        <section class="events-card">
+          <h1>Our Events</h1>
+
+          <!-- 🔻 PASTE YOUR CURRENT events.html TEXT CONTENT HERE (list of events, paragraphs, etc.) 🔻 -->
+          <p>
+            
+            <strong>The Compute Institute (TCi)</strong> is proud to announce the inauguration of a new <span class="highlight">AI-enabled computer lab</span>, a community initiative led by its founders, Anish Subramanian and Anuj Subramanian.
+            <br>The inauguration event took place on Friday, October 3, 2025, at 9:00 AM at the Govt. Higher Secondary School, in Panayapatti (Pudukottai District).<br>
+            We are honored to have had the Honorable Tamil Nadu Minister for Natural Resources, <span class="highlight">Mr. S. Ragupathi</span>, officiate the ceremony. He was joined by local educators, dignitaries, and community leaders.
+            <br><br>
+            This initiative aims to <span class="highlight">empower rural students</span> by introducing Computer Science as a standard subject for grades 6 through 10. TCi will donate computers and provide ongoing support with a dedicated curriculum and teaching staff, enabling students to gain vital skills in modern technology, including resposible AI learning through a strong collaboration with local volunteers and educators.
+          
+          </p>
+          <!-- 🔺 END PASTE AREA 🔺 -->
+        </section>
+
+        <!-- PHOTO CAROUSEL / GALLERY -->
+        <section class="events-gallery">
+          <h2>Photo Highlights</h2>
+          <p class="events-gallery-text">
+            Moments from Panayapatti and our partner schools — inaugurations, first computer lessons,
+            and students exploring technology for the very first time.
+          </p>
+
+          <div class="events-carousel">
+            <button class="carousel-arrow prev" aria-label="Previous photo">&#10094;</button>
+
+            <div class="carousel-track">
+              <img
+                src="PHOTO-2025-10-03-10-27-14 2.jpg"
+                alt="Students using new computers"
+                class="carousel-slide active"
+              />
+              <img
+                src="PHOTO-2025-10-03-10-27-14 3.jpg"
+                alt="Panayapatti school inauguration class"
+                class="carousel-slide"
+              />
+              <img
+                src="PHOTO-2025-10-03-10-27-14 4.jpg"
+                alt="Students in computer lab"
+                class="carousel-slide"
+              />
+              <img
+                src="PHOTO-2025-10-03-10-27-14 5.jpg"
+                alt="Community and students at the lab"
+                class="carousel-slide"
+              />
+              <img
+                src="PHOTO-2025-10-03-10-27-14.jpg"
+                alt="Installing computers in school lab"
+                class="carousel-slide"
+              />
+            </div>
+
+            <button class="carousel-arrow next" aria-label="Next photo">&#10095;</button>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER (same as other pages) -->
+      <footer class="footer">
+        <div class="frame-12">
+          <div class="group-5">
+            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
+            <img
+              class="TCI-logo-sep"
+              src="TCI logo Sep 2025.png"
+              alt="The Compute Initiative logo"
+            />
+          </div>
+          <p class="talent-is-everywhere">
+            Talent is everywhere, but opportunity isn’t. In the villages of Tamil Nadu, bright high school
+            students are being left behind in the digital age.<br /><br />
+            The Compute Initiative works to close this gap by providing computers, internet access, and guidance
+            to students who need them most. It’s about more than access to technology, it’s about showing these
+            students they have the power to dream bigger!
+          </p>
+        </div>
+        <div class="frame-13">
+          <div class="text-wrapper-13">Main Menu</div>
+          <div class="home-events-about-us">
+            Home<br /><br />Events<br /><br />About Us<br /><br />Contact Us<br /><br />Donate Now
+          </div>
+        </div>
+        <div class="frame-14">
+          <div class="text-wrapper-13">Connect With Us</div>
+          <div class="frame-15"></div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Simple carousel JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = Array.from(document.querySelectorAll(".carousel-slide"));
+        const prevBtn = document.querySelector(".carousel-arrow.prev");
+        const nextBtn = document.querySelector(".carousel-arrow.next");
+
+        if (!slides.length || !prevBtn || !nextBtn) return;
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+          });
+        }
+
+        prevBtn.addEventListener("click", function () {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", function () {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+        });
+      });
+    </script>
   </body>
 </html>
