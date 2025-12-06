@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -76,5 +76,175 @@
       </div>
     </footer>
     <script src="script.js"></script>
+  </body>
+</html> -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — The Compute Initiative</title>
+
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="desktop">
+
+      <!-- HEADER (same as other pages) -->
+      <header class="header">
+        <div class="group"></div>
+        <div class="text-wrapper">The Compute Institute</div>
+        <div class="frame">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+          <a href="donate.html" class="button-l">
+            <div class="buttons">Donate</div>
+          </a>
+        </div>
+      </header>
+
+      <!-- MAIN CONTACT CONTENT -->
+      <main class="contact-main">
+
+        <!-- HERO -->
+        <section class="contact-hero">
+          
+          <div class="contact-hero-title">Contact The Compute Initiative</div>
+        </section>
+
+        <!-- CONTACT CARD WITH INFO + FORM -->
+        <section class="contact-card">
+          <h1>Get in touch</h1>
+          <p>
+            Have questions, ideas, or want to partner with us? We’d love to hear from you.
+            Use the form below or reach out using the contact details.
+          </p>
+
+          <div class="contact-columns">
+            <!-- Left: contact details -->
+            <div class="contact-column">
+              <h2>Contact details</h2>
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:computeinitative@gmail.com">computeinitiative@gmail.com</a><br />
+              </p>
+              <p>
+                <strong>Locations:</strong><br />
+                Tamil Nadu, India<br />
+                Chicago, Illinois, USA
+              </p>
+              <p>
+                <strong>Stay connected</strong><br />
+                Follow our journey, see updates from our partner schools, and learn how your
+                support is transforming access to technology and education.
+                <li>
+                  
+                </li>
+              </p>
+              <!-- You can add social links/icons here later -->
+            </div>
+
+            <!-- Right: contact form -->
+            <div class="contact-column">
+              <h2>Send us a message</h2>
+              <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" name="name" class="form-input" required />
+                </div>
+
+                <div class="form-row">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" required />
+                </div>
+
+                <div class="form-row">
+                  <label for="subject" class="form-label">Subject / Reason</label>
+                  <input type="text" id="subject" name="subject" class="form-input" required />
+                </div>
+
+                <div class="form-row">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary form-submit">
+                  Send Email
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER (same as other pages) -->
+      <footer class="footer">
+        <div class="frame-12">
+          <div class="group-5">
+            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
+            <img
+              class="TCI-logo-sep"
+              src="TCI logo Sep 2025.png"
+              alt="The Compute Initiative logo"
+            />
+          </div>
+          <p class="talent-is-everywhere">
+            Talent is everywhere, but opportunity isn’t. In the villages of Tamil Nadu, bright high school
+            students are being left behind in the digital age.<br /><br />
+            The Compute Initiative works to close this gap by providing computers, internet access, and guidance
+            to students who need them most. It’s about more than access to technology, it’s about showing these
+            students they have the power to dream bigger!
+          </p>
+        </div>
+        <div class="frame-13">
+          <div class="text-wrapper-13">Main Menu</div>
+          <div class="home-events-about-us">
+            Home<br /><br />Events<br /><br />About Us<br /><br />Contact Us<br /><br />Donate Now
+          </div>
+        </div>
+        <div class="frame-14">
+          <div class="text-wrapper-13">Connect With Us</div>
+          <div class="frame-15"></div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Simple mailto handler so the form "sends" via user's email app -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const subject = document.getElementById("subject").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          const fullSubject = subject || "Message from compute.care contact form";
+          const bodyLines = [
+            "Name: " + name,
+            "Email: " + email,
+            "",
+            "Message:",
+            message
+          ];
+
+          const mailtoLink =
+            "mailto:info@compute.care" +
+            "?subject=" + encodeURIComponent(fullSubject) +
+            "&body=" + encodeURIComponent(bodyLines.join("\\n"));
+
+          window.location.href = mailtoLink;
+        });
+      });
+    </script>
   </body>
 </html>

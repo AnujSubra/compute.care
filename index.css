@@ -1032,3 +1032,130 @@ body {
   padding-top: 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
+
+
+/* CONTACT PAGE LAYOUT
+   ---------------------------------------- */
+
+.contact-main {
+  margin-top: 120px; /* below header */
+  padding: 56px 182px 80px;
+  box-sizing: border-box;
+  background-color: var(--collection-1-color-background-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Hero styling, consistent with donate/about cards */
+.contact-hero {
+  text-align: center;
+  padding: 60px 24px 40px;
+  background-color: var(--collection-1-color-brand-primary);
+  color: var(--collection-1-color-text-onprimary);
+  border-radius: 16px;
+  box-shadow: 0px 8px 4px #11445c33;
+}
+
+.contact-hero-title {
+  font-family: var(--font-heading-l-font-family);
+  font-weight: var(--font-heading-l-font-weight);
+  font-size: var(--font-heading-l-font-size);
+  letter-spacing: var(--font-heading-l-letter-spacing);
+  line-height: var(--font-heading-l-line-height);
+  color: var(--collection-1-color-background-surface);
+  margin-top: 8px;
+}
+
+/* Contact content card */
+.contact-card {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 32px 48px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 8px 4px #11445c33;
+}
+
+.contact-card h1,
+.contact-card h2 {
+  font-family: var(--font-heading-m-font-family);
+  font-weight: var(--font-heading-m-font-weight);
+  font-size: var(--font-heading-m-font-size);
+  color: var(--collection-1-color-text-primary);
+  margin-top: 0;
+}
+
+.contact-card p,
+.contact-card a {
+  font-family: var(--font-body-m-font-family);
+  font-weight: var(--font-body-m-font-weight);
+  font-size: var(--font-body-m-font-size);
+  letter-spacing: var(--font-body-m-letter-spacing);
+  line-height: var(--font-body-m-line-height);
+  color: var(--collection-1-color-text-primary);
+}
+
+.contact-card a {
+  color: var(--collection-1-color-brand-secondary);
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Two-column layout for details + form */
+.contact-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.contact-column {
+  flex: 1 1 260px;
+}
+
+/* Form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-family: var(--font-body-m-font-family);
+  font-weight: var(--font-body-m-font-weight);
+  font-size: var(--font-body-m-font-size);
+  color: var(--collection-1-color-text-primary);
+}
+
+.form-input,
+.form-textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: var(--font-body-m-font-family);
+  font-size: var(--font-body-m-font-size);
+  color: var(--collection-1-color-text-primary);
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--collection-1-color-brand-secondary);
+  box-shadow: 0 0 0 2px rgba(17, 68, 92, 0.15);
+}
+
+.form-submit {
+  margin-top: 8px;
+  align-self: flex-start; /* keep button left-aligned under fields */
+}
