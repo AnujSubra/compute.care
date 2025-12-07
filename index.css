@@ -47,7 +47,7 @@ body {
   font-family: var(--font-heading-m-font-family);
   font-weight: var(--font-heading-m-font-weight);
   color: var(--collection-1-color-brand-secondary);
-  font-size: var(--font-heading-m-font-size);
+  font-size: 40px;
   text-align: center;
   letter-spacing: var(--font-heading-m-letter-spacing);
   line-height: var(--font-heading-m-line-height);
@@ -110,7 +110,7 @@ body {
   text-decoration: none;
   font-family: var(--font-heading-m-font-family);
   font-weight: var(--font-heading-m-font-weight);
-  font-size: var(--font-heading-m-font-size);
+  font-size: var(--font-heading-m-font-size)-50;
   color: var(--collection-1-color-text-primary);
   letter-spacing: var(--font-heading-m-letter-spacing);
   line-height: var(--font-heading-m-line-height);
@@ -324,9 +324,9 @@ body {
 }
 
 .desktop .progress-bar {
-  position: absolute;
+  position: relative;
   top: 435px;
-  left: 183px;
+  left: 220px;
   width: 1074px;
   height: 128px;
   background-color: var(--collection-1-color-brand-primary);
