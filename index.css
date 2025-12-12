@@ -139,7 +139,7 @@ body {
   top: 499px;
   left: 0;
   height: 379px;
-  background-color: var(--collection-1-color-background-surface);
+  background-color: var(--collection-1-color-brand-primary);
   width: 100%;
   display: flex;
 }
@@ -154,7 +154,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  background-color: var(--collection-1-color-background-surface);
+  background-color: var(--collection-1-color-brand-primary);
 }
 
 .desktop .text-wrapper-2 {
@@ -163,7 +163,7 @@ body {
   margin-top: -1.00px;
   font-family: var(--font-heading-m-font-family);
   font-weight: var(--font-heading-m-font-weight);
-  color: var(--collection-1-color-text-primary);
+  color: var(--collection-1-color-text-onprimary);
   font-size: var(--font-heading-m-font-size);
   text-align: center;
   letter-spacing: var(--font-heading-m-letter-spacing);
@@ -204,7 +204,7 @@ body {
   margin-top: -1.00px;
   font-family: "Poppins-Bold", Helvetica;
   font-weight: 700;
-  color: var(--collection-1-color-brand-primary);
+  color: var(--collection-1-color-background-surface);
   font-size: 56px;
   text-align: center;
   letter-spacing: 0;
@@ -217,7 +217,7 @@ body {
   height: 39px;
   font-family: var(--font-body-m-font-family);
   font-weight: var(--font-body-m-font-weight);
-  color: var(--collection-1-color-text-primary);
+  color: var(--collection-1-color-text-onprimary);
   font-size: var(--font-body-m-font-size);
   text-align: center;
   letter-spacing: var(--font-body-m-letter-spacing);
@@ -249,7 +249,7 @@ body {
   height: 39px;
   font-family: var(--font-body-m-font-family);
   font-weight: var(--font-body-m-font-weight);
-  color: var(--collection-1-color-text-primary);
+  color: var(--collection-1-color-text-onprimary);
   font-size: var(--font-body-m-font-size);
   text-align: center;
   letter-spacing: var(--font-body-m-letter-spacing);
@@ -329,8 +329,9 @@ body {
   left: 220px;
   width: 1074px;
   height: 128px;
-  background-color: var(--collection-1-color-brand-primary);
+  background-color: #2596be;
   border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .desktop .frame-8 {
@@ -354,7 +355,7 @@ body {
 }
 
 .desktop .rectangle {
-  width: 532px;
+  width: 122px;
   height: 29px;
   background-color: var(--collection-1-color-brand-progress);
   border-radius: 16px;
@@ -400,10 +401,10 @@ body {
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 
-  padding: 56px 182px; /* you can tweak 182px later */
+  padding: 56px 24px; /* you can tweak 182px later */
   background-color: var(--collection-1-color-brand-primary);
 
   margin-left: 0;
@@ -413,7 +414,8 @@ body {
 .desktop .frame-9 {
   display: flex;
   flex-direction: column;
-  width: 1075px;
+  width: 100%;
+  max-width: 1200px;
   align-items: center;
   gap: 52px;
   position: relative;
@@ -426,7 +428,7 @@ body {
   margin-top: -1.00px;
   font-family: var(--font-heading-m-font-family);
   font-weight: var(--font-heading-m-font-weight);
-  color: var(--collection-1-color-text-onprimary);
+  color: #e76c2e;
   font-size: var(--font-heading-m-font-size);
   text-align: center;
   letter-spacing: var(--font-heading-m-letter-spacing);
@@ -460,6 +462,39 @@ body {
     rgba(17, 68, 92, 0.2) 100%
   );
   background-color: var(--collection-1-color-brand-overlay);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.desktop .education:hover {
+  background-color: var(--collection-1-color-brand-primary);
+}
+
+.desktop .education:hover .text-wrapper-9 {
+  display: none;
+}
+
+.desktop .education:hover .bullets-content {
+  display: block !important;
+}
+
+.desktop .bullets-content {
+  display: none;
+}
+
+.desktop .bullets-content ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.desktop .bullets-content li {
+  color: #ffffff;
+  font-family: var(--font-body-m-font-family);
+  font-weight: var(--font-body-m-font-weight);
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-align: left;
 }
 
 .desktop .text-wrapper-9 {
@@ -517,7 +552,7 @@ body {
   align-items: center;
   gap: 52px;
 
-  padding: 56px 263px;
+  padding: 56px 24px;
   background-color: var(--collection-1-color-background-surface);
 
   margin-left: 0;
@@ -610,8 +645,8 @@ body {
   align-items: center;
   gap: 15px;
 
-  padding: 58px 182px;
-  background-color: var(--collection-1-color-brand-primary);
+  padding: 58px 24px;
+  background-color: var(--collection-1-color-background-surface);
 
   margin-left: 0;
 }
@@ -632,7 +667,7 @@ body {
   height: 73px;
   font-family: var(--font-body-m-font-family);
   font-weight: var(--font-body-m-font-weight);
-  color: var(--collection-1-color-text-onprimary);
+  color: var(--collection-1-color-text-primary);
   font-size: var(--font-body-m-font-size);
   text-align: center;
   letter-spacing: var(--font-body-m-letter-spacing);
@@ -641,12 +676,15 @@ body {
 }
 
 .desktop .gallery {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 26px;
   position: relative;
-  flex: 0 0 auto;
+  flex-wrap: wrap;
   background-color: var(--collection-1-color-background-surface);
+  width: 100%;
+  max-width: 1200px;
 }
 
 .desktop .rectangle-2 {
@@ -691,8 +729,11 @@ body {
   z-index: 5;
   width: 100%;
   display: flex;
+  justify-content: center;
+  gap: 100px;
   background-color: var(--collection-1-color-brand-secondary);
   margin-left: 0;
+  padding: 0 24px;
 }
 
 
@@ -702,7 +743,7 @@ body {
   width: 385px;
   height: 307px;
   position: relative;
-  margin-left: 182px;
+  margin-left: 0;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
@@ -759,7 +800,7 @@ body {
   width: 190px;
   height: 255px;
   position: relative;
-  margin-left: 188px;
+  margin-left: 0;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
@@ -800,7 +841,7 @@ body {
   width: 219px;
   height: 63px;
   position: relative;
-  margin-left: 110px;
+  margin-left: 0;
   flex-direction: column;
   align-items: flex-start;
   gap: 19px;
