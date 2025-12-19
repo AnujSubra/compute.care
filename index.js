@@ -1,22 +1,6 @@
 // Donation slider that updates the displayed raised amount
 document.addEventListener('DOMContentLoaded', function(){
 	
-	// Hover boxes for What We Do section
-	const hoverBoxes = document.querySelectorAll('.hover-box');
-	hoverBoxes.forEach(box => {
-		const bulletsContent = box.querySelector('.bullets-content');
-		const textWrapper = box.querySelector('.text-wrapper-9');
-		
-		box.addEventListener('mouseenter', function() {
-			if (textWrapper) textWrapper.style.display = 'none';
-			if (bulletsContent) bulletsContent.style.display = 'block';
-		});
-		
-		box.addEventListener('mouseleave', function() {
-			if (textWrapper) textWrapper.style.display = 'block';
-			if (bulletsContent) bulletsContent.style.display = 'none';
-		});
-	});
 
 	// Simple carousel
 	const track = document.querySelector('.carousel-track');
