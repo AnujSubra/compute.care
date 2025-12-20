@@ -1345,11 +1345,23 @@ body {
     padding: 10px;
   }
 
+  .desktop .group {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+  }
+
   .desktop .text-wrapper {
+    width: auto;
+    max-width: 150px;
+    margin-left: 5px;
     font-size: 20px;
   }
 
   .desktop .frame {
+    margin-left: auto;
+    width: auto;
+    flex-shrink: 1;
     flex-direction: column;
     gap: 10px;
   }
@@ -1438,6 +1450,11 @@ body {
     font-size: 16px;
   }
 
+  .desktop .button-l {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
   .footer {
     padding: 20px 10px;
   }
@@ -1450,5 +1467,30 @@ body {
   .desktop .frame-13,
   .desktop .frame-14 {
     margin-top: 20px;
+  }
+
+  /* Main containers for all pages */
+  .about-main,
+  .donate-main,
+  .contact-main,
+  .events-main {
+    padding: 20px 10px 40px;
+  }
+
+  /* Heroes */
+  .about-hero,
+  .donate-hero,
+  .contact-hero,
+  .events-hero {
+    padding: 30px 15px 20px;
+  }
+
+  /* Cards */
+  .about-card,
+  .donate-card,
+  .contact-card,
+  .events-card,
+  .events-gallery {
+    padding: 20px 15px;
   }
 }
