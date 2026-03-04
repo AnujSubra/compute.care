@@ -36,6 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	// Progress bar update (index.html only)
+	const raisedElem = document.getElementById('raised-amount');
+	const goalElem = document.getElementById('goal-amount');
+	const progressRect = document.querySelector('.desktop .rectangle');
+	if (raisedElem && goalElem && progressRect) {
+		const parseAmount = txt => Number(txt.replace(/[^0-9.]/g, ''));
+		const raised = parseAmount(raisedElem.textContent || '0');
+		const goal = parseAmount(goalElem.textContent || '0');
+		if (goal > 0) {
+			const pct = Math.min(100, Math.max(0, (raised / goal) * 100));
+			progressRect.style.width = pct + '%';
+		}
+	}
+
 	// Donate form
 	const donateForm = document.getElementById('donateForm');
 	if(donateForm){

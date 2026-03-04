@@ -109,7 +109,7 @@
 
         <!-- EVENTS COPY CARD — paste your existing text here -->
         <section class="events-card">
-          <h1>Our Events</h1>
+          <h1>Panayapatti Inauguration Event</h1>
 
           <!-- 🔻 PASTE YOUR CURRENT events.html TEXT CONTENT HERE (list of events, paragraphs, etc.) 🔻 -->
           <p>
@@ -128,8 +128,8 @@
         <section class="events-gallery">
           <h2>Photo Highlights</h2>
           <p class="events-gallery-text">
-            Moments from Panayapatti and our partner schools — inaugurations, first computer lessons,
-            and students exploring technology for the very first time.
+            Moments from Panayapatti inauguration.
+            
           </p>
 
           <div class="events-carousel">
@@ -163,6 +163,31 @@
               />
             </div>
 
+            <button class="carousel-arrow next" aria-label="Next photo">&#10095;</button>
+          </div>
+        </section>
+
+        <!-- NEW EVENT CARD -->
+        <section class="events-card">
+          <h1>Student Recognition Ceremony</h1>
+          <p>
+            The <strong>Co-Founders and Administrative Team for The Compute Initiative </strong>, Anish Subramanian and Anuj Subramanian and the SRM Arunachalam Staff, were honored to attend the Student Recognition Ceremony at SRM Arunachalam Higher Secondary School in Panayapatti on <strong>December 24, 2025</strong>. This special event celebrated the achievements of students who have <strong>excelled in their computer science studies</strong> since the launch of our first computer lab in October 2025. It was inspiring to see the dedication and hard work of these students being <strong>recognized by their school and community</strong>. We are proud to support their educational journey and look forward to seeing all they will accomplish in the future.
+          </p>
+        </section>
+
+        <!-- ADDITIONAL PHOTO CAROUSEL FOR NEW EVENT -->
+        <section class="events-gallery">
+          <h2>Ceremony Highlights</h2>
+          <p class="events-gallery-text">
+            Take a look at some of the memorable moments from the Student Recognition Ceremony at SRM Arunachalam Higher Secondary School in Panayapatti.
+          </p>
+
+          <div class="events-carousel">
+            <button class="carousel-arrow prev" aria-label="Previous photo">&#10094;</button>
+            <div class="carousel-track">
+              <!-- placeholder slides; add real images as needed -->
+              <img src="" alt="" class="carousel-slide active" />
+            </div>
             <button class="carousel-arrow next" aria-label="Next photo">&#10095;</button>
           </div>
         </section>
@@ -207,28 +232,24 @@
     <!-- Simple carousel JS -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-        const prevBtn = document.querySelector(".carousel-arrow.prev");
-        const nextBtn = document.querySelector(".carousel-arrow.next");
-
-        if (!slides.length || !prevBtn || !nextBtn) return;
-
-        let currentIndex = 0;
-
-        function showSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.toggle("active", i === index);
+        // Initialize each carousel independently
+        document.querySelectorAll('.events-carousel').forEach(container => {
+          const slides = Array.from(container.querySelectorAll('.carousel-slide'));
+          const prevBtn = container.querySelector('.carousel-arrow.prev');
+          const nextBtn = container.querySelector('.carousel-arrow.next');
+          if (!slides.length || !prevBtn || !nextBtn) return;
+          let currentIndex = 0;
+          function showSlide(idx) {
+            slides.forEach((slide, i) => slide.classList.toggle('active', i === idx));
+          }
+          prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
           });
-        }
-
-        prevBtn.addEventListener("click", function () {
-          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-          showSlide(currentIndex);
-        });
-
-        nextBtn.addEventListener("click", function () {
-          currentIndex = (currentIndex + 1) % slides.length;
-          showSlide(currentIndex);
+          nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+          });
         });
       });
     </script>
