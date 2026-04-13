@@ -83,6 +83,32 @@ body {
 
 .desktop .button-l {
   position: relative;
+  top:40px;
+  right:100px;
+  flex: 0 0 auto;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: #e76c2e;
+}
+.desktop .button-aboutt-l {
+  position: relative;
+  bottom:19px;
+  left:60px;
+  flex: 0 0 auto;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: #e76c2e;
+}
+.desktop .button-new-l {
+  position: relative;
   flex: 0 0 auto;
   border-radius: 20px;
   display: inline-flex;
@@ -173,6 +199,8 @@ body {
 
 .desktop .frame-wrapper {
   position: relative;
+  left:175px;
+  bottom:30px;
   align-self: stretch;
   width: 100%;
   height: 159px;
@@ -317,10 +345,11 @@ body {
   font-family: var(--font-heading-l-font-family);
   font-weight: var(--font-heading-l-font-weight);
   color: var(--collection-1-color-background-surface);
-  font-size: var(--font-heading-l-font-size);
+  font-size: 22px;
   letter-spacing: var(--font-heading-l-letter-spacing);
   line-height: var(--font-heading-l-line-height);
   font-style: var(--font-heading-l-font-style);
+  text-align: center;
 }
 
 .desktop .progress-bar {
