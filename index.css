@@ -481,7 +481,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 345px;
-  height: 300px;
+  min-height: 300px;
+  height: auto;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
@@ -592,30 +593,33 @@ body {
 
 .desktop .group-3 {
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
   width: 882px;
-  height: 388px;
+  min-height: 388px;
 }
 
 .desktop .img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  flex: 0 0 auto;
   width: 331px;
   height: 388px;
+  object-fit: cover;
 }
 
 .desktop .group-4 {
-  position: absolute;
-  top: 59px;
-  left: 449px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
   width: 435px;
-  height: 271px;
+  padding-top: 8px;
 }
 
 .desktop .the-compute {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 433px;
   font-family: var(--font-body-m-font-family);
   font-weight: var(--font-body-m-font-weight);
@@ -629,9 +633,7 @@ body {
 .desktop .button-m {
   all: unset;
   box-sizing: border-box;
-  position: absolute;
-  top: 228px;
-  left: 2px;
+  position: relative;
   border-radius: 16px;
   display: inline-flex;
   align-items: center;
@@ -694,13 +696,11 @@ body {
   font-style: var(--font-body-m-font-style);
 }
 
-.desktop .gallery {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 26px;
+.desktop .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
   position: relative;
-  flex-wrap: wrap;
   background-color: var(--collection-1-color-background-surface);
   width: 100%;
   max-width: 1200px;
@@ -713,35 +713,29 @@ body {
   object-fit: cover;
 }
 
-.desktop .rectangle-3 {
+.desktop .photo-grid img {
   position: relative;
-  width: 450px;
-  height: 308px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.desktop .chevron-left {
-  position: absolute;
-  top: 96px;
-  left: 50px;
-  width: 116px;
-  height: 116px;
+.desktop .partners-frame {
+  flex-wrap: wrap;
+  align-items: stretch;
+  row-gap: 20px;
 }
 
-.desktop .vector {
-  position: absolute;
-  width: 30.83%;
-  height: 50.00%;
-  top: 25.00%;
-  left: 33.33%;
+.desktop .education-auto {
+  height: auto;
+  min-height: 260px;
 }
 
-.desktop .chevron-right {
-  position: absolute;
-  top: 96px;
-  left: 907px;
-  width: 116px;
-  height: 116px;
-  aspect-ratio: 1;
+.desktop .education-auto .text-wrapper-9 {
+  font-size: 22px;
+  line-height: 1.25;
+  text-align: center;
 }
 
 .desktop .footer {
