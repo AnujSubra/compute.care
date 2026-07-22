@@ -1361,6 +1361,156 @@ body {
 }
 
 /* Mobile responsiveness */
+/* Laptop/tablet range: the hero + stats block above was built with fixed
+   pixel widths and absolute positioning sized for ~1440px+ desktops, which
+   overflows and clips text at common laptop widths. Re-flow it here. */
+@media (max-width: 1300px) {
+  .desktop .header {
+    padding: 0 24px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .desktop .group {
+    margin-left: 0;
+  }
+
+  .desktop .frame {
+    width: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .desktop .group-2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .desktop .section-2 {
+    position: relative;
+    order: 1;
+    height: auto;
+    padding: 60px 24px;
+  }
+
+  .desktop .text-wrapper-5 {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+  }
+
+  .desktop .progress-bar {
+    order: 2;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 24px auto 0;
+    padding: 20px 0;
+  }
+
+  .desktop .frame-8 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    gap: 12px 40px;
+    justify-content: center;
+  }
+
+  .desktop .rectangle-wrapper {
+    width: 100%;
+  }
+
+  .desktop .section {
+    order: 3;
+    position: relative;
+    top: 0;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .desktop .frame-2 {
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    padding: 0 24px;
+  }
+
+  .desktop .frame-wrapper {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: auto;
+  }
+
+  .desktop .frame-3 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .desktop .text-wrapper-3 {
+    height: auto;
+  }
+
+  /* Footer: three fixed-width columns (385/190/219px + 100px gaps) never
+     wrapped, so "Connect With Us" ran off the right edge of the page on
+     any screen narrower than ~1100px. */
+  .desktop .footer {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+
+  .desktop .frame-12,
+  .desktop .frame-13,
+  .desktop .frame-14 {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .desktop .group-5 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .desktop .TCI-logo-sep {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex: 0 0 auto;
+    width: 60px;
+    height: 48px;
+  }
+
+  .desktop .text-wrapper-12 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    white-space: normal;
+  }
+
+  .desktop .talent-is-everywhere,
+  .desktop .home-events-about-us {
+    height: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .desktop {
     padding: 0 10px;
@@ -1389,6 +1539,34 @@ body {
     flex-shrink: 1;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .desktop .group-3 {
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .desktop .img {
+    width: 100%;
+    max-width: 331px;
+    height: 260px;
+  }
+
+  .desktop .group-4 {
+    width: 100%;
+  }
+
+  .desktop .the-compute {
+    width: 100%;
+  }
+
+  .desktop .frame-10 {
+    flex-wrap: wrap;
+  }
+
+  .desktop .frame-11 {
+    width: 100%;
   }
 
   .nav-link {
