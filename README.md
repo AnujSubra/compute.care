@@ -29,3 +29,7 @@ The redesigned pages use versioned asset filenames to avoid reusing cached pre-r
 All active pages declare a root base URL because compute.care is hosted at the domain root. This ensures styles, navigation, and photos resolve correctly even if hosting serves an inner page through a trailing-slash URL.
 
 Layout repair validation: all seven pages rendered in Chromium at 1440px and 390px with no horizontal overflow, missing source images, or JavaScript errors. Mobile menu open/Escape close, curriculum expansion, and photo viewer open/Escape close passed. Live-host verification was unavailable from the workspace (502 responses).
+
+## Self-contained page delivery
+
+Every active HTML page embeds its complete CSS and JavaScript. This removes stylesheet-fetch and stale-asset dependencies. No domain-root base tag is used; the site can also run under a repository subpath. `site-v2.css` and `site-v2.js` remain the editable source copies: changes to them must be reflected in the embedded blocks.
