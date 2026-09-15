@@ -2,7 +2,7 @@
 
 Static website. Run `python -m http.server 8000` from the repository and open http://localhost:8000. No build step or package installation is required.
 
-The site uses `index.css` and `script.js`. All primary content and navigation are available without JavaScript. JavaScript adds the compact mobile menu, photo viewer, and email draft form. The form opens the visitor’s email client; it does not send or store submissions.
+The site uses `site-v2.css` and `site-v2.js`. All primary content and navigation are available without JavaScript. JavaScript adds the compact mobile menu, photo viewer, and email draft form. The form opens the visitor’s email client; it does not send or store submissions.
 
 ## Content and maintenance
 
@@ -21,3 +21,11 @@ Photos were inspected before use. All photos used on the website already exist i
 ## Before publication
 
 Review factual content and the redesign in the pull request, then merge through the repository’s normal publishing process. This change does not configure or replace hosting.
+
+## Stylesheet compatibility
+
+The redesigned pages use versioned asset filenames to avoid reusing cached pre-redesign CSS or JavaScript. `index.css` retains the legacy rules for older HTML still cached during deployment. When changing the markup/style contract, publish a new asset filename and update every page together.
+
+All active pages declare a root base URL because compute.care is hosted at the domain root. This ensures styles, navigation, and photos resolve correctly even if hosting serves an inner page through a trailing-slash URL.
+
+Layout repair validation: all seven pages rendered in Chromium at 1440px and 390px with no horizontal overflow, missing source images, or JavaScript errors. Mobile menu open/Escape close, curriculum expansion, and photo viewer open/Escape close passed. Live-host verification was unavailable from the workspace (502 responses).
