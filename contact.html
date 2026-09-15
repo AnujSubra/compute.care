@@ -1319,6 +1319,14 @@ textarea {
 /* Keep the people in the portrait source visible within the About layout. */
 .section-first > figure img[src="TCI promo photo 3.jpg"] { object-position: center top; }
 
+
+/* Display the original emblem beside the organisation name. */
+.brand-logo { display:block; position:relative; overflow:hidden; width:62px; height:60px; flex:0 0 62px; mix-blend-mode:multiply; }
+.brand-logo img { position:absolute; width:113px; height:113px; max-width:none; left:-25px; top:-14px; }
+@media(max-width:640px) {
+ .brand-logo { width:52px; height:52px; flex-basis:52px; }
+ .brand-logo img { width:96px; height:96px; left:-21px; top:-12px; }
+}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2311445c%27/%3E%3Ctext x=%275%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27bold%27 fill=%27%23e76c2e%27%3ET%3C/text%3E%3C/svg%3E" />
 
@@ -1331,9 +1339,7 @@ textarea {
           class="brand"
           href="index.html"
           aria-label="The Compute Initiative home"
-          ><span class="brand-mark" aria-hidden="true"
-            >TC<span>i</span><b>✳</b></span
-          ><span>The Compute<br />Initiative</span></a
+          ><span class="brand-logo" aria-hidden="true"><img src="TCI%20logo%20Sep%202025.png" alt="" width="1024" height="1024" /></span><span>The Compute<br />Initiative</span></a
         ><button
           class="menu-toggle"
           aria-expanded="false"
