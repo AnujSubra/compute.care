@@ -4,122 +4,169 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Donate — The Compute Initiative</title>
-
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
+    <meta
+      name="description"
+      content="Support computers, connectivity, teaching staff, and learning materials for TCI’s partner schools."
+    />
+    <meta name="theme-color" content="#11445c" />
     <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <div class="desktop">
-
-      <!-- HEADER -->
-      <header class="header">
-        <div class="group"></div>
-        <div class="text-wrapper">The Compute Initiative</div>
-        <div class="frame">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="about.html" class="nav-link">About Us</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-          <a href="donate.html" class="button-new-l">
-            <div class="buttons">Donate</div>
-          </a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="The Compute Initiative home"
+          ><span class="brand-mark" aria-hidden="true"
+            >TC<span>i</span><b>✳</b></span
+          ><span>The Compute<br />Initiative</span></a
+        ><button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html">Events</a><a href="about.html">About Us</a
+          ><a href="contact.html">Contact</a
+          ><a class="button nav-donate" href="donate.html"
+            >Donate <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro wrap">
+        <p class="eyebrow">Support the mission</p>
+        <h1>Help turn access<br />into opportunity.</h1>
+        <p class="lead">
+          Your support helps equip classrooms, sustain teaching, and give
+          students time to learn, practise, and create.
+        </p>
+      </section>
+      <section class="wrap split section-first">
+        <figure class="">
+          <img
+            src="TCI promo photo 1.jpg"
+            alt="A student learning to use a computer in a TCI classroom"
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
+        </figure>
+        <div>
+          <p class="eyebrow">Your support at work</p>
+          <h2>A computer is a start.<br />A classroom takes a community.</h2>
+          <ul class="support-list">
+            <li>
+              <strong>Computers & connectivity</strong
+              ><span
+                >Equipment, software, and internet access for hands-on
+                learning.</span
+              >
+            </li>
+            <li>
+              <strong>Dedicated teachers</strong
+              ><span
+                >Support for local educators who guide students day after
+                day.</span
+              >
+            </li>
+            <li>
+              <strong>Learning materials</strong
+              ><span
+                >Curriculum, practice activities, and books to keep learning
+                growing.</span
+              >
+            </li>
+          </ul>
         </div>
-      </header>
-
-      <!-- MAIN DONATE CONTENT -->
-      <main class="donate-main">
-
-        <!-- HERO -->
-        <section class="donate-hero">
-          <p class="text-wrapper-4">Igniting Young Minds Through Technology</p>
-          <div class="donate-hero-title">Support The Compute Initiative</div>
-        </section>
-
-        <!-- LARGE DONATE CTA SECTION -->
-        <section class="donate-cta-section">
-          <p class="donate-cta-text">
-            Your donation helps us provide computers, internet access, and learning opportunities
-            to underserved students in rural Tamil Nadu.
+      </section>
+      <section class="soft section">
+        <div class="wrap">
+          <p class="eyebrow">Ways to give</p>
+          <h2>Choose how you’d like to help.</h2>
+          <div class="two-grid">
+            <article class="giving-card">
+              <span class="number">01 / GOFUNDME</span>
+              <h3>Support our fundraiser</h3>
+              <p>
+                Visit our GoFundMe campaign to see the latest fundraising
+                progress and contribute to the initiative.
+              </p>
+              <a class="button" href="https://gofund.me/e507a041f"
+                >Visit GoFundMe <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="giving-card">
+              <span class="number">02 / COMMUNITY PARTNER</span>
+              <h3>Give through NSNA</h3>
+              <p>
+                Visit Nagarathar Sangam of North America to learn about giving
+                through TCI’s fund. Contact us if you need help finding the
+                project.
+              </p>
+              <a class="button secondary" href="https://www.achi.org/"
+                >Visit NSNA <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+          <p class="small">
+            Donations are handled on the linked organisations’ websites.
           </p>
-
-          <!-- PRIMARY DONATE BUTTON -->
-          <a href="https://gofund.me/e507a041f"
-             class="btn-primary"
-             target="_blank"
-             rel="noopener">
-            Donate Now
-          </a>
-        </section>
-
-        <!-- MAIN CARD WITH YOUR EXISTING DONATE CONTENT -->
-        <section class="donate-card">
-          <h1>Support our work through Nagarathar Sangam North America (NSNA)</h1>
-          <p>
-            Your donations help fund education, devices, and the initiative.
-            Visit this link and donate through TCi's fund:     
-            <br>
-            <br>
-            <a href="https://www.achi.org/"
-               class="btn-primary"
-               target="_blank"
-               rel="noopener">
-               Donate Now
-            </a>
-          </p>
-
-          <div class="gofundme-promo">
-            <h2>Support us on GoFundMe!</h2>
-            <p>
-              Every dollar you donate brings us closer to our goal of creating real impact in our community.
-              Help us fund devices, education, and future opportunities. Your donations help to procure
-              computer devices, support dedicated teaching staff and drive the entire community initiative forward.
-              <strong>Be part of the change — donate today!</strong>
-            </p>
-
-            <!-- SECONDARY BUT MATCHING BUTTON -->
-            <a href="https://gofund.me/e507a041f"
-               class="btn-primary"
-               target="_blank"
-               rel="noopener">
-              Donate Now
-            </a>
-          </div>
-        </section>
-      </main>
-
-      <!-- FOOTER -->
-      <footer class="footer">
-        <div class="frame-12">
-          <div class="group-5">
-            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
-            <img class="TCI-logo-sep" src="TCI logo Sep 2025.png" alt="The Compute Initiative logo" />
-          </div>
-          <p class="talent-is-everywhere">
-            Talent is everywhere, but opportunity isn’t ... yet. In the&nbsp;&nbsp;villages of Tamil Nadu, bright high school
-            students are&nbsp;&nbsp;being left behind in the digital age.<br /><br />The Compute Initiative works to
-            close this gap by providing computers, internet access, and guidance to students unfamiliar with these resources. 
+        </div>
+      </section>
+      <section class="wrap section">
+        <p class="eyebrow">More ways to contribute</p>
+        <h2>Your time and skills matter, too.</h2>
+        <p>
+          Interested in volunteering, donating equipment, or connecting us with
+          a school? Let’s talk.
+        </p>
+        <a class="button secondary" href="contact.html"
+          >Get in touch <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            >The Compute Initiative<span class="orange">✳</span></a
+          >
+          <p>Talent is everywhere.<br />Opportunity should be, too.</p>
+          <p class="small">
+            Computers, curriculum, and community.<br />Rural Tamil Nadu, India ·
+            Chicago, USA
           </p>
         </div>
-
-        <div class="frame-13">
-          <div class="text-wrapper-13">Main Menu</div>
-          <div class="home-events-about-us">
-            <a href = index.html class = "home-events-about-us">Home</a><br /><br /><a href = events.html class = "home-events-about-us">Events</a><br /><br /><a href = about.html class = "home-events-about-us">About Us</a><br /><br /><a href = contact.html class = "home-events-about-us">Contact Us</a><br /><br /><a href = donate.html class = "home-events-about-us">Donate Now</a>
-          </div>
+        <div>
+          <h2>Explore</h2>
+          <a href="index.html">Home</a><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html">Events</a><a href="about.html">About Us</a
+          ><a href="contact.html">Contact</a>
         </div>
-
-        <div class="frame-14">
-          <div class="text-wrapper-13">Connect With Us</div>
-          <div class="frame-15">
-            <a href="https://www.instagram.com/thecomputeinitiative/" class = "home-events-about-us">Instagram</a>
-            <br /><br />
-            <a href="https://www.linkedin.com/company/the-compute-initiative/" class = "home-events-about-us">LinkedIn</a>
-          </div>
+        <div>
+          <h2>Let’s connect</h2>
+          <a href="mailto:computeinitiative@gmail.com"
+            >computeinitiative@gmail.com</a
+          ><a href="https://www.instagram.com/thecomputeinitiative/"
+            >Instagram ↗</a
+          ><a href="https://www.linkedin.com/company/the-compute-initiative/"
+            >LinkedIn ↗</a
+          ><a href="contact.html">Volunteer or partner with us ↗</a>
         </div>
-      </footer>
-
-    </div>
+      </div>
+      <div class="wrap footer-bottom">
+        The Compute Initiative · Learning together. Growing together.
+      </div>
+    </footer>
   </body>
 </html>

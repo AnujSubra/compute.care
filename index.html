@@ -1,235 +1,408 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>compute.care</title>
-
-  <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="styleguide.css" />
-  <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-  <!DOCTYPE html>
-<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home — The Compute Initiative</title>
+    <meta
+      name="description"
+      content="Computers, caring teachers, and hands-on learning for students in rural Tamil Nadu. Meet The Compute Initiative’s schools and explore our curriculum."
+    />
+    <meta name="theme-color" content="#11445c" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
+  </head>
   <body>
-    <div class="desktop">
-      <header class="header">
-        <div class="group"></div>
-        <div class="text-wrapper">The Compute Initiative</div>
-        <div class="frame">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="about.html" class="nav-link">About Us</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-          <a href="donate.html" class="button-new-l">
-            <div class="buttons">Donate</div>
-          </a>
-          
-        </div>
-      </header>
-      <div class="group-2">
-        <div class="section">
-          <div class="frame-2">
-            <div class="text-wrapper-2">Why This Mission Matters</div>
-            <div class="frame-wrapper">
-              <div class="frame-3">
-                <div class="frame-4">
-                  <div class="text-wrapper-3">33%</div>
-                  <p class="p">of Tamil Nadu's population lacks internet access</p>
-                </div>
-                <div class="frame-5">
-                  <div class="text-wrapper-3">1/3</div>
-                  <p class="p">rural students has no smartphone</p>
-                </div>
-                <div class="frame-6">
-                  <div class="text-wrapper-3">&lt;5%</div>
-                  <p class="of-rural-households">
-                    of rural households in India own a computer
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-2">
-          <p class="text-wrapper-4">Every Student Deserves a Digital Future</p>
-          <div class="text-wrapper-5">The Compute Initiative brings computers, coding, and curriculum to students in rural Tamil Nadu because talent is everywhere, but opportunity isn't.</div>
-          <a href="donate.html" >
-            <div class="button-l"><div class="buttons">Support Us</div></div>
-          </a>
-          <a href="about.html" >
-            <div class="button-aboutt-l"><div class="buttons">Learn More</div></div>
-          </a>
-        </div>
-        <div class="progress-bar">
-          <div class="frame-8">
-            <div class="rectangle-wrapper"><div class="rectangle"></div></div>
-            <p class="div-2">
-              <span id="raised-amount" class="span">$9,000</span>
-              <span class="text-wrapper-6">&nbsp;</span>
-              <span class="text-wrapper-7">Raised</span>
-            </p>
-            
-            <p class="div-2">
-              <span id="goal-amount" class="span">$20,000</span>
-              <span class="text-wrapper-6">&nbsp;</span>
-              <span class="text-wrapper-7">Goal</span>
-            </p>
-          </div>
-        </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="The Compute Initiative home"
+          ><span class="brand-mark" aria-hidden="true"
+            >TC<span>i</span><b>✳</b></span
+          ><span>The Compute<br />Initiative</span></a
+        ><button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a
+          ><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html">Events</a><a href="about.html">About Us</a
+          ><a href="contact.html">Contact</a
+          ><a class="button nav-donate" href="donate.html"
+            >Donate <span aria-hidden="true">↗</span></a
+          >
+        </nav>
       </div>
-      <div class="section-3">
-        <div class="text-wrapper-11">Who We Are</div>
-        <div class="group-3">
-          <img class="img" src="TCI promo photo 3.jpg" alt="The Compute Initiative students in the classroom" />
-          <div class="group-4">
-            <p class="the-compute">
-              The Compute Initiative (TCI) is a nonprofit bringing computer science education to under-resourced government-aided schools in rural Tamil Nadu, India. Founded by Anish and Anuj Subramanian on a simple belief — where you grow up shouldn't determine what you can achieve — TCI provides daily CS instruction and teacher training to students in grades 6–9.
-              <br><br>
-              We mobilize volunteers through grassroots recruiting, fundraise, and run every part of the operation ourselves: hardware, internet installation, and school logistics. We partner with SRM Arunachalam Higher Secondary School in Panayapatti, our newest school in Kuruvikondanpatti, and Thamarai Schools International, with support from Nagarathar Sangam of North America (NSNA) and our official Code Club (a Raspberry Pi Foundation program). Together with dedicated local teachers, we've built a daily curriculum now running in 2 schools, taught 700+ hours to 200 students, and donated 300 books.
+    </header>
+    <main id="main">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot"></span> Rooted in Tamil Nadu. Built
+            together.
+          </p>
+          <h1>Every student deserves a <em>digital future.</em></h1>
+          <p class="lead">
+            A first click. A line of code. A new possibility.<br />We bring
+            computers, caring teachers, and hands-on learning to students in
+            rural Tamil Nadu.
+          </p>
+          <div class="actions">
+            <a class="button" href="donate.html"
+              >Support a classroom <span aria-hidden="true">↗</span></a
+            ><a class="button secondary" href="schools.html"
+              >Meet our schools <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <a class="hero-footnote" href="curriculum.html"
+            >From computer basics to creating something of their own
+            <span aria-hidden="true">↓</span></a
+          >
+        </div>
+        <div class="hero-visual">
+          <img
+            class="hero-photo"
+            src="TCI promo photo 1.jpg"
+            alt="Students practise on classroom computers with their teacher nearby"
+            width="900"
+            height="1200"
+            fetchpriority="high"
+          /><span class="photo-label"
+            >Inside a TCI classroom · Panayapatti</span
+          >
+          <div class="photo-note">
+            <span aria-hidden="true">✳</span
+            ><strong>Big possibilities.<br />One classroom at a time.</strong>
+          </div>
+        </div>
+      </section>
+      <section class="fund-strip">
+        <div class="wrap fund-inner">
+          <div>
+            <strong>Help the next classroom get started.</strong
+            ><span>Computers. Connectivity. Dedicated teachers.</span>
+          </div>
+          <a class="button" href="donate.html"
+            >Help us grow <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="impact-band">
+        <div class="wrap section-top">
+          <p class="eyebrow">Small beginnings. Shared progress.</p>
+          <h2>Look what a community can build.</h2>
+        </div>
+        <div class="metrics wrap">
+          <div><strong>2</strong><span>partner school programs</span></div>
+          <div><strong>200</strong><span>students reached</span></div>
+          <div><strong>700+</strong><span>teaching hours delivered</span></div>
+          <div><strong>300</strong><span>books donated</span></div>
+        </div>
+        <p class="wrap small impact-note">
+          Program milestones reported by The Compute Initiative.
+        </p>
+      </section>
+      <section class="wrap section split">
+        <div class="story-image">
+          <figure class="">
+            <img
+              src="TCI promo photo 3.jpg"
+              alt="Students and their teacher gathered in the Panayapatti classroom"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <figcaption>
+              Learning is a shared effort. Panayapatti, Tamil Nadu.
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <p class="eyebrow">Who we are</p>
+          <h2>Talent is everywhere.<br /><em>Let’s open the doors.</em></h2>
+          <p>
+            Where a student grows up shouldn’t determine what they can create.
+            Founded by Anish and Anuj Subramanian, The Compute Initiative brings
+            computer science education to under-resourced, government-aided
+            schools in rural Tamil Nadu.
+          </p>
+          <p>
+            We work with local teachers, schools, and volunteers to make
+            learning part of everyday school life—from setting up computers and
+            internet access to supporting daily lessons for grades 6–9.
+          </p>
+          <a class="button secondary" href="about.html"
+            >Our story <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="soft section">
+        <div class="wrap">
+          <p class="eyebrow">What we do</p>
+          <h2>Access is the beginning.<br />Confidence is what comes next.</h2>
+          <div class="three-grid">
+            <article class="feature">
+              <span class="number">01 / EQUIP</span>
+              <h3>A place to begin</h3>
+              <p>
+                We help schools set up computers, software, and internet access
+                so students can learn by doing.
+              </p>
+            </article>
+            <article class="feature">
+              <span class="number">02 / TEACH</span>
+              <h3>Guidance, every day</h3>
+              <p>
+                Dedicated local teachers guide practice, answer questions, and
+                help students build skills at their own pace.
+              </p>
+            </article>
+            <article class="feature">
+              <span class="number">03 / CREATE</span>
+              <h3>Skills to build on</h3>
+              <p>
+                Students progress from files and email to presentations,
+                practical projects, and programming enrichment.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="wrap section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Our partner schools</p>
+            <h2>Two communities.<br />A shared possibility.</h2>
+          </div>
+          <a class="text-link" href="schools.html">Explore our schools →</a>
+        </div>
+        <div class="school-grid">
+          <article class="school-card">
+            <figure class="">
+              <img
+                src="PHOTO-2025-11-18-10-18-33 2.jpg"
+                alt="A teacher leads a computer lesson with students in Panayapatti"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </figure>
+            <div class="card-body">
+              <p class="eyebrow">Our first school · Since 2025</p>
+              <h3>Panayapatti</h3>
+              <p>
+                At SRM Arunachalam Higher Secondary School, daily lessons turn
+                access to a computer into skills students can use.
+              </p>
+              <a class="text-link" href="schools.html#panayapatti"
+                >Meet the school <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </article>
+          <article class="school-card">
+            <figure class="">
+              <img
+                src="Kuruvikondanpatti install 2.jpg"
+                alt="Teachers and community members beside the computer lab in Kuruvikondanpatti"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </figure>
+            <div class="card-body">
+              <p class="eyebrow">Our second school · Since 2026</p>
+              <h3>Kuruvikondanpatti</h3>
+              <p>
+                A new computer lab brings the same commitment to hands-on
+                learning to a second school community.
+              </p>
+              <a class="text-link" href="schools.html#kuruvikondanpatti"
+                >Meet the school <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="curriculum-teaser">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Inside the classroom</p>
+            <h2>From “how does this work?”<br />to “look what I made.”</h2>
+            <p>
+              Seven foundational units, a practical project, and room to keep
+              exploring. Lessons pair teacher demonstrations with time for
+              students to try things themselves.
             </p>
-            <a href="about.html" >
-              <button class="button-m"><div class="buttons-2">Learn More</div></button>
-            </a>
+            <a class="button" href="curriculum.html"
+              >Explore the curriculum <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <ol class="learning-path">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Get comfortable</h3>
+                <p>Computers, files, and the internet</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Make it useful</h3>
+                <p>Email, documents, spreadsheets, and slides</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Put it together</h3>
+                <p>A practical project and Python enrichment</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="wrap section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Faces of change</p>
+            <h2>This is what possibility looks like.</h2>
+          </div>
+          <a class="text-link" href="events.html">More classroom stories →</a>
+        </div>
+        <div class="photo-stories">
+          <figure class="">
+            <img
+              src="TCI promo photo 2.jpg"
+              alt="Students take turns using a computer"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <figcaption>
+              A little practice. A little help. A new skill.
+            </figcaption>
+          </figure>
+          <figure class="">
+            <img
+              src="Kuruvikondanpatti install 1.jpg"
+              alt="School community members at the Kuruvikondanpatti lab"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <figcaption>A second school joins the journey.</figcaption>
+          </figure>
+          <figure class="">
+            <img
+              src="2026 book distribution1.jpg"
+              alt="Books being organised at the partner school"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <figcaption>Learning continues beyond the screen.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="soft section">
+        <div class="wrap">
+          <p class="eyebrow">Better, together</p>
+          <h2>The people behind the possibility.</h2>
+          <div class="partner-grid">
+            <article>
+              <p class="eyebrow">Community support</p>
+              <h3>NSNA</h3>
+              <p>
+                Nagarathar Sangam of North America supports computers, teaching
+                staff, and school logistics.
+              </p>
+              <a class="text-link" href="https://www.achi.org/">Meet NSNA ↗</a>
+            </article>
+            <article>
+              <p class="eyebrow">Coding community</p>
+              <h3>Code Club</h3>
+              <p>
+                Our registered Code Club connects TCI with the Raspberry Pi
+                Foundation’s global community of young creators.
+              </p>
+              <a class="text-link" href="https://codeclub.org/"
+                >Explore Code Club ↗</a
+              >
+            </article>
+            <article>
+              <p class="eyebrow">Education partnership</p>
+              <h3>Thamarai Schools International</h3>
+              <p>
+                Part of the network of education partners supporting The Compute
+                Initiative’s mission.
+              </p>
+              <a class="text-link" href="https://thamaraischools.org/"
+                >Meet Thamarai ↗</a
+              >
+            </article>
           </div>
         </div>
-      </div>
-      <div class="div-wrapper">
-        <div class="frame-9">
-          <div class="text-wrapper-8">What We Do</div>
-          <div class="frame-10">
-            <div class="education hover-box" data-bullets="Many nagarathar schools still lack computers, software & reliable internet|Trained teachers to guide our students|Exposure to modern AI and tech skills">
-              <div class="text-wrapper-9">The Challenge</div>
-              <div class="bullets-content hidden">
-                <ul>
-                  <li>Millions of students in rural India are growing up without access to the tools that define the modern world. </li>
-                  <li> In many nagarathar schools, there are no computers, no trained tech educators, and no exposure to the skills] that today's workforce demands. </li>
-                  <li>Without intervention, these students will be left behind before they even get a chance to compete.</li>
-                 
-                </ul>
-              </div>
-            </div>
-            <div class="education hover-box" data-bullets="Equip classroom with computers, software learning materials and internet|Provide dedicated teachers to train students in AI and digital literacy">
-              <div class="text-wrapper-9">Your Impact</div>
-              <div class="bullets-content hidden">
-                <ul>
-                  <li>Directly help us equip classrooms with computers, software, and internet access with donations</li>
-                  <li>Hire and train dedicated teachers in digital literacy and AI</li>
-                  <li>Show students that the future is something they can build.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="education hover-box" data-bullets="Now running in 2 schools: Panayapatti and Kuruvikondanpatti|200 students taught, 700+ volunteer teaching hours delivered|300 books donated to students|Officially recognized as a Code Club by the Raspberry Pi Foundation">
-              <div class="text-wrapper-9">Success Story</div>
-              <div class="bullets-content hidden">
-                <ul>
-                  <li>What started with 80 students in one lab has grown to 200 students in grades 6–9 across 2 schools — Panayapatti and our newest site in Kuruvikondanpatti — with 700+ volunteer teaching hours delivered so far.</li>
-                  <li>We've donated 300 books to students and are officially recognized as a Code Club by the Raspberry Pi Foundation, with new partners like NSNA backing our expansion.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-4">
-        <div class="frame-11">
-          <div class="text-wrapper">Faces of Change</div>
-          <p class="meet-the-students">
-            Behind every statistic is a student seeing a computer for the first time, a teacher sharing a passion for coding, a parent watching their child's oppurtunities and capabilities expand. These are the people driving The Compute Initiative forward and with your support, there will be many more.
-
+      </section>
+      <section class="cta wrap">
+        <div>
+          <p class="eyebrow">A place for you in this story</p>
+          <h2>Help a student take<br />their next step.</h2>
+          <p>
+            Support a classroom, share your skills, or start a conversation.
           </p>
         </div>
-        <div class="photo-grid">
-          <img class="rectangle-3" src="Panayapatti school inaguration class (1).jpg" alt="Panayapatti classroom during the inauguration" />
-          <img class="rectangle-3" src="TCI promo photo 1.jpg" alt="TCI students with computers" />
-          <img class="rectangle-3" src="TCI promo photo 2.jpg" alt="TCI students learning" />
-          <img class="rectangle-3" src="TCI promo photo 3.jpg" alt="TCI students learning" />
-          <img class="rectangle-3" src="Kuruvikondanpatti install 1.jpg" alt="Installing computers at our new Kuruvikondanpatti school" />
-          <img class="rectangle-3" src="Kuruvikondanpatti install 2.jpg" alt="Kuruvikondanpatti computer lab setup" />
-          <img class="rectangle-3" src="Kuruvikondanpatti install 3.jpg" alt="Kuruvikondanpatti computer lab setup" />
-          <img class="rectangle-3" src="Kuruvikondanpatti install 4.jpg" alt="Kuruvikondanpatti computer lab setup" />
-          <img class="rectangle-3" src="2026 book distribution1.jpg" alt="2026 book distribution to students" />
-          <img class="rectangle-3" src="2026 book distribution2.jpg" alt="2026 book distribution to students" />
-          <img class="rectangle-3" src="2026 book distribution3.jpg" alt="2026 book distribution to students" />
-          <img class="rectangle-3" src="PHOTO-2025-11-18-10-18-33 2.jpg" alt="Students in the computer lab" />
+        <div class="actions">
+          <a class="button" href="donate.html"
+            >Support the mission <span aria-hidden="true">↗</span></a
+          ><a class="button secondary" href="contact.html"
+            >Get involved <span aria-hidden="true">↗</span></a
+          >
         </div>
-      </div>
-
-      <div class="div-wrapper">
-        <div class="frame-9">
-          <div class="text-wrapper-8">New Schools &amp; Partners</div>
-          <div class="frame-10 partners-frame">
-            <div class="education education-auto">
-              <div class="text-wrapper-9">Kuruvikondanpatti — Our Second School</div>
-              <ul>
-                <li>Installed a new computer lab in 2026, bringing TCI's daily CS curriculum to a second government-aided school.</li>
-                <li>Same 7-week hands-on curriculum as Panayapatti: computer fundamentals, internet &amp; email basics, Word, Excel, presentations, and Python.</li>
-              </ul>
-            </div>
-            <div class="education education-auto">
-              <div class="text-wrapper-9">
-                <img src="NSNA1.png" alt="Nagarathar Sangam of North America (NSNA) logo" style="height:28px;vertical-align:middle;margin-right:8px;" />
-                Nagarathar Sangam North America (NSNA)
-              </div>
-              <ul>
-                <li>NSNA, a non-profit charitable organization, backs TCI as a recognized special project, helping fund computers, teacher salaries, and school logistics.</li>
-                <li>Donations made through NSNA directly support our expansion to new schools.</li>
-              </ul>
-            </div>
-            <div class="education education-auto">
-              <div class="text-wrapper-9">
-                <img src="TCI_CodeClub_Certificate_Instagram.png" alt="TCI Code Club certificate" style="height:28px;vertical-align:middle;margin-right:8px;border-radius:4px;" />
-                Official Code Club
-              </div>
-              <ul>
-                <li>The Compute Initiative runs an officially registered Code Club, part of the Raspberry Pi Foundation's global network (codeclub.org).</li>
-                <li>Anish and Anuj Subramanian are recognized Code Club Leader and Mentor, giving our students the chance to code games, animations, and websites.</li>
-              </ul>
-            </div>
-            <div class="education education-auto">
-              <div class="text-wrapper-9">Our Teachers</div>
-              <ul>
-                <li><strong>Vidhya P</strong> — Computer Instructor at Panayapatti, with 5 years of experience managing computer labs and teaching core computer subjects.</li>
-                <li><strong>Saranya</strong> — our newest teacher, a web designer and systems analyst bringing hands-on programming and systems experience to our growing classrooms.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer class="footer">
-        <div class="frame-12">
-          <div class="group-5">
-            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
-            <img class="TCI-logo-sep" src="TCI logo Sep 2025.png" />
-          </div>
-          <p class="talent-is-everywhere">
-            Talent is everywhere, but opportunity isn’t ... yet. In the&nbsp;&nbsp;villages of Tamil Nadu, bright high school
-            students are&nbsp;&nbsp;being left behind in the digital age.<br /><br />The Compute Initiative works to
-            close this gap by providing computers, internet access, and guidance to students unfamiliar with these resources. 
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            >The Compute Initiative<span class="orange">✳</span></a
+          >
+          <p>Talent is everywhere.<br />Opportunity should be, too.</p>
+          <p class="small">
+            Computers, curriculum, and community.<br />Rural Tamil Nadu, India ·
+            Chicago, USA
           </p>
         </div>
-        <div class="frame-13">
-          <div class="text-wrapper-13">Main Menu</div>
-          <div class="home-events-about-us">
-            <a href = index.html class = "home-events-about-us">Home</a><br /><br /><a href = events.html class = "home-events-about-us">Events</a><br /><br /><a href = about.html class = "home-events-about-us">About Us</a><br /><br /><a href = contact.html class = "home-events-about-us">Contact Us</a><br /><br /><a href = donate.html class = "home-events-about-us">Donate Now</a>
-          </div>
+        <div>
+          <h2>Explore</h2>
+          <a href="index.html" aria-current="page">Home</a
+          ><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html">Events</a><a href="about.html">About Us</a
+          ><a href="contact.html">Contact</a>
         </div>
-        <div class="frame-14">
-          <div class="text-wrapper-13">Connect With Us</div>
-          <div class="frame-15">
-            <a href="https://www.instagram.com/thecomputeinitiative/" class = "home-events-about-us" target="_blank">Instagram</a>
-            <br /><br />
-            <a href="https://www.linkedin.com/company/the-compute-initiative/" class = "home-events-about-us" target="_blank">LinkedIn</a>
-          </div>
+        <div>
+          <h2>Let’s connect</h2>
+          <a href="mailto:computeinitiative@gmail.com"
+            >computeinitiative@gmail.com</a
+          ><a href="https://www.instagram.com/thecomputeinitiative/"
+            >Instagram ↗</a
+          ><a href="https://www.linkedin.com/company/the-compute-initiative/"
+            >LinkedIn ↗</a
+          ><a href="contact.html">Volunteer or partner with us ↗</a>
         </div>
-      </footer>
-    </div>
-    <script src="script.js"></script>
+      </div>
+      <div class="wrap footer-bottom">
+        The Compute Initiative · Learning together. Growing together.
+      </div>
+    </footer>
   </body>
-</html>
-
-  
-</body>
 </html>

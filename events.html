@@ -1,261 +1,292 @@
-<!-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Events — The Compute Initiative</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">
-          <img src="TCI%20logo%20Sep%202025.png" alt="The Compute Initiative logo" class="brand-logo" />
-          <span class="brand-text">The Compute Initiative</span>
-        </a>
-        <button id="navToggle3" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="nav" id="mainNav3">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="donate.html" class="nav-link nav-cta">Donate</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container">
-      <section>
-        <h1 class="event-title">Events</h1>
-        <div class="event-description">
-          <p>
-            <strong>The Compute Institute (TCi)</strong> is proud to announce the inauguration of a new <span class="highlight">AI-enabled computer lab</span>, a community initiative led by its founders, Anish Subramanian and Anuj Subramanian.
-            <br>The inauguration event took place on Friday, October 3, 2025, at 9:00 AM at the Govt. Higher Secondary School, in Panayapatti (Pudukottai District).<br>
-            We are honored to have had the Honorable Tamil Nadu Minister for Natural Resources, <span class="highlight">Mr. S. Ragupathi</span>, officiate the ceremony. He was joined by local educators, dignitaries, and community leaders.
-            <br><br>
-            This initiative aims to <span class="highlight">empower rural students</span> by introducing Computer Science as a standard subject for grades 6 through 10. TCi will donate computers and provide ongoing support with a dedicated curriculum and teaching staff, enabling students to gain vital skills in modern technology, including resposible AI learning through a strong collaboration with local volunteers and educators.
-          </p>
-        </div>
-
-        
-        <div class="carousel" aria-roledescription="carousel" aria-label="Event photos">
-          <button class="carousel-button prev" aria-label="Previous slide">&lt;</button>
-          <div class="carousel-viewport">
-            <div class="carousel-track"></div>
-          </div>
-          <button class="carousel-button next" aria-label="Next slide">&gt;</button>
-          <div class="carousel-dots" role="tablist" aria-label="Slide indicators"></div>
-        </div>
-
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>The Compute Initiative</strong>
-        </div>
-        <nav class="footer-nav">
-          <a href="events.html">Events</a>
-          <a href="donate.html">Donate</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html> -->
-
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Events — The Compute Initiative</title>
-
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
+    <title>Events & Milestones — The Compute Initiative</title>
+    <meta
+      name="description"
+      content="Explore classroom photos, our school openings, student recognition, book distribution, and Code Club milestones."
+    />
+    <meta name="theme-color" content="#11445c" />
     <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <div class="desktop">
-
-      <!-- HEADER (same as other pages) -->
-      <header class="header">
-        <div class="group"></div>
-        <div class="text-wrapper">The Compute Initiative</div>
-        <div class="frame">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="about.html" class="nav-link">About Us</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-          <a href="donate.html" class="button-new-l">
-            <div class="buttons">Donate</div>
-          </a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="The Compute Initiative home"
+          ><span class="brand-mark" aria-hidden="true"
+            >TC<span>i</span><b>✳</b></span
+          ><span>The Compute<br />Initiative</span></a
+        ><button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html" aria-current="page">Events</a
+          ><a href="about.html">About Us</a><a href="contact.html">Contact</a
+          ><a class="button nav-donate" href="donate.html"
+            >Donate <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro wrap">
+        <p class="eyebrow">Events & milestones</p>
+        <h1>The moments that<br />move us forward.</h1>
+        <p class="lead">
+          From our first lab to a second school, each step grows from the work
+          of students, teachers, and a wider community.
+        </p>
+      </section>
+      <section class="wrap timeline">
+        <article class="milestone">
+          <div class="timeline-date">2026</div>
+          <div class="milestone-content">
+            <h2>A second school joins the journey</h2>
+            <p>
+              The computer lab at Kuruvikondanpatti extends our daily computer
+              science program to a second community, with Saranya joining as a
+              local instructor.
+            </p>
+            <figure class="event-photo">
+              <img
+                src="Kuruvikondanpatti install 1.jpg"
+                alt="School staff and community members at Kuruvikondanpatti"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </figure>
+          </div>
+        </article>
+        <article class="milestone">
+          <div class="timeline-date">2026</div>
+          <div class="milestone-content">
+            <h2>300 books. More ways to learn.</h2>
+            <p>
+              TCI distributed 300 books to students at partner schools,
+              supporting reading and learning beyond the computer lab.
+            </p>
+            <figure class="event-photo">
+              <img
+                src="2026 book distribution1.jpg"
+                alt="Books being prepared for distribution"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </figure>
+          </div>
+        </article>
+        <article class="milestone">
+          <div class="timeline-date">2026</div>
+          <div class="milestone-content">
+            <h2>Part of the Code Club community</h2>
+            <p>
+              TCI is officially registered as a Code Club, part of the Raspberry
+              Pi Foundation’s global network. Anish and Anuj are recognised as
+              Code Club leaders and mentors.
+            </p>
+            <figure class="event-photo">
+              <img
+                src="TCI_CodeClub_Certificate_Instagram.png"
+                alt="The Compute Initiative Code Club recognition"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </figure>
+          </div>
+        </article>
+        <article class="milestone">
+          <div class="timeline-date">December 24, 2025</div>
+          <div class="milestone-content">
+            <h2>Celebrating student progress</h2>
+            <p>
+              Anish and Anuj joined the SRM Arunachalam staff for a Student
+              Recognition Ceremony in Panayapatti, celebrating students’
+              progress in computer science since the lab opened.
+            </p>
+          </div>
+        </article>
+        <article class="milestone">
+          <div class="timeline-date">October 3, 2025</div>
+          <div class="milestone-content">
+            <h2>Our first computer lab opens</h2>
+            <p>
+              The Panayapatti inauguration brought together students, educators,
+              community leaders, and S. Ragupathi, who officiated the ceremony.
+              It marked the start of a continuing commitment to computer science
+              learning.
+            </p>
+            <figure class="event-photo">
+              <img
+                src="PHOTO-2025-10-03-10-27-14 2.jpg"
+                alt="Community members and students at the Panayapatti inauguration"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </figure>
+          </div>
+        </article>
+      </section>
+      <section class="soft section">
+        <div class="wrap">
+          <p class="eyebrow">Everyday moments</p>
+          <h2>Learning, together.</h2>
+          <p>Select a photo to take a closer look.</p>
+          <div class="gallery">
+            <a class="gallery-item" href="TCI promo photo 1.jpg" data-lightbox
+              ><img
+                src="TCI promo photo 1.jpg"
+                alt="Students practising computer skills"
+                width="800"
+                height="600"
+                loading="lazy"
+              /><span
+                >Students practising computer skills
+                <b aria-hidden="true">↗</b></span
+              ></a
+            ><a
+              class="gallery-item"
+              href="PHOTO-2025-11-18-10-18-33 2.jpg"
+              data-lightbox
+              ><img
+                src="PHOTO-2025-11-18-10-18-33 2.jpg"
+                alt="A teacher leads a lesson at Panayapatti"
+                width="800"
+                height="600"
+                loading="lazy"
+              /><span
+                >A teacher leads a lesson at Panayapatti
+                <b aria-hidden="true">↗</b></span
+              ></a
+            ><a
+              class="gallery-item"
+              href="Kuruvikondanpatti install 2.jpg"
+              data-lightbox
+              ><img
+                src="Kuruvikondanpatti install 2.jpg"
+                alt="Teachers at the new Kuruvikondanpatti lab"
+                width="800"
+                height="600"
+                loading="lazy"
+              /><span
+                >Teachers at the new Kuruvikondanpatti lab
+                <b aria-hidden="true">↗</b></span
+              ></a
+            ><a
+              class="gallery-item"
+              href="Panayapatti computers install1.jpg"
+              data-lightbox
+              ><img
+                src="Panayapatti computers install1.jpg"
+                alt="A computer workstation at Panayapatti"
+                width="800"
+                height="600"
+                loading="lazy"
+              /><span
+                >A computer workstation at Panayapatti
+                <b aria-hidden="true">↗</b></span
+              ></a
+            ><a
+              class="gallery-item"
+              href="2026 book distribution2.jpg"
+              data-lightbox
+              ><img
+                src="2026 book distribution2.jpg"
+                alt="The 2026 book distribution"
+                width="800"
+                height="600"
+                loading="lazy"
+              /><span
+                >The 2026 book distribution <b aria-hidden="true">↗</b></span
+              ></a
+            ><a
+              class="gallery-item"
+              href="PHOTO-2025-10-03-10-27-14 3.jpg"
+              data-lightbox
+              ><img
+                src="PHOTO-2025-10-03-10-27-14 3.jpg"
+                alt="The Panayapatti inauguration"
+                width="800"
+                height="600"
+                loading="lazy"
+              /><span
+                >The Panayapatti inauguration <b aria-hidden="true">↗</b></span
+              ></a
+            >
+          </div>
         </div>
-      </header>
-
-      <!-- MAIN EVENTS CONTENT -->
-      <main class="events-main">
-
-        <!-- HERO -->
-        <section class="events-hero">
-          
-          <div class="events-hero-title">Events &amp; Milestones</div>
-        </section>
-
-        <!-- EVENTS COPY CARD — paste your existing text here -->
-        <section class="events-card">
-          <h1>Panayapatti Inauguration Event</h1>
-
-          <!-- 🔻 PASTE YOUR CURRENT events.html TEXT CONTENT HERE (list of events, paragraphs, etc.) 🔻 -->
+      </section>
+      <dialog id="photo-dialog" aria-label="Photo viewer">
+        <button class="dialog-close" aria-label="Close photo">Close ✕</button
+        ><img alt="" />
+        <p></p>
+      </dialog>
+      <section class="cta wrap">
+        <div>
+          <p class="eyebrow">A place for you in this story</p>
+          <h2>Help a student take<br />their next step.</h2>
           <p>
-            
-            <strong>The Compute Initiative (TCi)</strong> is proud to announce the inauguration of a new <span class="highlight">AI-enabled computer lab</span>, a community initiative led by its founders, Anish Subramanian and Anuj Subramanian.
-            <br>The inauguration event took place on Friday, October 3, 2025, at 9:00 AM at the Govt. Higher Secondary School, in Panayapatti (Pudukottai District).<br>
-            We are honored to have had the Honorable Tamil Nadu Minister for Natural Resources, <span class="highlight">Mr. S. Ragupathi</span>, officiate the ceremony. He was joined by local educators, dignitaries, and community leaders.
-            <br><br>
-            This initiative aims to <span class="highlight">empower rural students</span> by introducing Computer Science as a standard subject for grades 6 through 10. TCi will donate computers and provide ongoing support with a dedicated curriculum and teaching staff, enabling students to gain vital skills in modern technology, including resposible AI learning through a strong collaboration with local volunteers and educators.
-          
-          </p>
-          <!-- 🔺 END PASTE AREA 🔺 -->
-        </section>
-
-        <!-- PHOTO GALLERY -->
-        <section class="events-gallery">
-          <h2>Photo Highlights</h2>
-          <p class="events-gallery-text">
-            Moments from Panayapatti inauguration.
-          </p>
-
-          <div class="photo-grid">
-            <img src="PHOTO-2025-10-03-10-27-14 2.jpg" alt="Students using new computers" />
-            <img src="PHOTO-2025-10-03-10-27-14 3.jpg" alt="Panayapatti school inauguration class" />
-            <img src="PHOTO-2025-10-03-10-27-14 4.jpg" alt="Students in computer lab" />
-            <img src="PHOTO-2025-10-03-10-27-14 5.jpg" alt="Community and students at the lab" />
-            <img src="PHOTO-2025-10-03-10-27-14.jpg" alt="Installing computers in school lab" />
-            <img src="PHOTO-2025-10-02-09-50-40.jpg" alt="Panayapatti school lab" />
-            <img src="PHOTO-2025-10-03-07-31-33.jpg" alt="Panayapatti school lab" />
-            <img src="PHOTO-2025-10-04-21-25-46.jpg" alt="Students at the inauguration" />
-          </div>
-        </section>
-
-        <!-- NEW EVENT CARD -->
-        <section class="events-card">
-          <h1>Student Recognition Ceremony</h1>
-          <p>
-            The <strong>Co-Founders and Administrative Team for The Compute Initiative </strong>, Anish Subramanian and Anuj Subramanian and the SRM Arunachalam Staff, were honored to attend the Student Recognition Ceremony at SRM Arunachalam Higher Secondary School in Panayapatti on <strong>December 24, 2025</strong>. This special event celebrated the achievements of students who have <strong>excelled in their computer science studies</strong> since the launch of our first computer lab in October 2025. It was inspiring to see the dedication and hard work of these students being <strong>recognized by their school and community</strong>. We are proud to support their educational journey and look forward to seeing all they will accomplish in the future.
-          </p>
-        </section>
-
-        <!-- ADDITIONAL PHOTO GALLERY FOR RECOGNITION CEREMONY -->
-        <section class="events-gallery">
-          <h2>Ceremony Highlights</h2>
-          <p class="events-gallery-text">
-            Take a look at some of the memorable moments from the Student Recognition Ceremony at SRM Arunachalam Higher Secondary School in Panayapatti.
-          </p>
-
-          <div class="photo-grid">
-            <img src="Panayapatti computers install1.jpg" alt="Panayapatti computer lab" />
-            <img src="Panayapatti computers install2.jpg" alt="Panayapatti computer lab" />
-            <img src="PHOTO-2025-11-18-10-18-33 2.jpg" alt="Students in the computer lab" />
-          </div>
-        </section>
-
-        <!-- NEW EVENT CARD: SECOND SCHOOL -->
-        <section class="events-card">
-          <h1>Second School Opens — Kuruvikondanpatti</h1>
-          <p>
-            In 2026, <strong>The Compute Initiative</strong> installed its second computer lab at a government-aided
-            school in <strong>Kuruvikondanpatti</strong>, extending the same daily computer science curriculum that
-            launched at Panayapatti to a new community of students. With this expansion, TCI now runs a daily
-            curriculum across <strong>2 schools</strong>, has delivered <strong>700+ teaching hours</strong> to
-            <strong>200 students</strong>, and is supported by our newest teacher, <strong>Saranya</strong>.
-          </p>
-        </section>
-
-        <section class="events-gallery">
-          <h2>Kuruvikondanpatti Highlights</h2>
-          <p class="events-gallery-text">
-            Setting up the new computer lab and welcoming students to their first classes.
-          </p>
-          <div class="photo-grid">
-            <img src="Kuruvikondanpatti install 1.jpg" alt="Installing computers at Kuruvikondanpatti" />
-            <img src="Kuruvikondanpatti install 2.jpg" alt="Kuruvikondanpatti computer lab" />
-            <img src="Kuruvikondanpatti install 3.jpg" alt="Kuruvikondanpatti computer lab" />
-            <img src="Kuruvikondanpatti install 4.jpg" alt="Kuruvikondanpatti computer lab" />
-          </div>
-        </section>
-
-        <!-- NEW EVENT CARD: BOOK DISTRIBUTION -->
-        <section class="events-card">
-          <h1>2026 Book Distribution</h1>
-          <p>
-            Alongside our computer labs, TCI distributed <strong>300 books</strong> to students at our partner
-            schools in 2026, supporting reading and learning beyond the computer lab.
-          </p>
-        </section>
-
-        <section class="events-gallery">
-          <h2>Book Distribution Highlights</h2>
-          <div class="photo-grid">
-            <img src="2026 book distribution1.jpg" alt="2026 book distribution" />
-            <img src="2026 book distribution2.jpg" alt="2026 book distribution" />
-            <img src="2026 book distribution3.jpg" alt="2026 book distribution" />
-            <img src="2026 book distribution4.jpg" alt="2026 book distribution" />
-            <img src="2026 book distribution5.jpg" alt="2026 book distribution" />
-          </div>
-        </section>
-
-        <!-- NEW EVENT CARD: CODE CLUB -->
-        <section class="events-card">
-          <h1>TCI is Now an Official Code Club</h1>
-          <p>
-            The Compute Initiative is officially registered as a <strong>Code Club</strong>, part of the
-            <a href="https://codeclub.org/">Raspberry Pi Foundation</a>'s global network of free coding clubs for
-            young people. Our students now have the opportunity to learn to code games, animations, and websites,
-            develop critical-thinking and problem-solving skills, and share their knowledge with others — with
-            Anish and Anuj Subramanian recognized as Code Club Leader and Mentor.
-          </p>
-        </section>
-      </main>
-
-      <!-- FOOTER (same as other pages) -->
-      <footer class="footer">
-        <div class="frame-12">
-          <div class="group-5">
-            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
-            <img
-              class="TCI-logo-sep"
-              src="TCI logo Sep 2025.png"
-              alt="The Compute Initiative logo"
-            />
-          </div>
-          <p class="talent-is-everywhere">
-            Talent is everywhere, but opportunity isn’t ... yet. In the&nbsp;&nbsp;villages of Tamil Nadu, bright high school
-            students are&nbsp;&nbsp;being left behind in the digital age.<br /><br />The Compute Initiative works to
-            close this gap by providing computers, internet access, and guidance to students unfamiliar with these resources. 
+            Support a classroom, share your skills, or start a conversation.
           </p>
         </div>
-        <div class="frame-13">
-          <div class="text-wrapper-13">Main Menu</div>
-          <div class="home-events-about-us">
-            <a href = index.html class = "home-events-about-us">Home</a><br /><br /><a href = events.html class = "home-events-about-us">Events</a><br /><br /><a href = about.html class = "home-events-about-us">About Us</a><br /><br /><a href = contact.html class = "home-events-about-us">Contact Us</a><br /><br /><a href = donate.html class = "home-events-about-us">Donate Now</a>
-          </div>
+        <div class="actions">
+          <a class="button" href="donate.html"
+            >Support the mission <span aria-hidden="true">↗</span></a
+          ><a class="button secondary" href="contact.html"
+            >Get involved <span aria-hidden="true">↗</span></a
+          >
         </div>
-        <div class="frame-14">
-          <div class="text-wrapper-13">Connect With Us</div>
-          <div class="frame-15">
-            <a href="https://www.instagram.com/thecomputeinitiative/" class = "home-events-about-us">Instagram</a>
-            <br /><br />
-            <a href="https://www.linkedin.com/company/the-compute-initiative/" class = "home-events-about-us">LinkedIn</a>
-          </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            >The Compute Initiative<span class="orange">✳</span></a
+          >
+          <p>Talent is everywhere.<br />Opportunity should be, too.</p>
+          <p class="small">
+            Computers, curriculum, and community.<br />Rural Tamil Nadu, India ·
+            Chicago, USA
+          </p>
         </div>
-      </footer>
-    </div>
-
+        <div>
+          <h2>Explore</h2>
+          <a href="index.html">Home</a><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html" aria-current="page">Events</a
+          ><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h2>Let’s connect</h2>
+          <a href="mailto:computeinitiative@gmail.com"
+            >computeinitiative@gmail.com</a
+          ><a href="https://www.instagram.com/thecomputeinitiative/"
+            >Instagram ↗</a
+          ><a href="https://www.linkedin.com/company/the-compute-initiative/"
+            >LinkedIn ↗</a
+          ><a href="contact.html">Volunteer or partner with us ↗</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        The Compute Initiative · Learning together. Growing together.
+      </div>
+    </footer>
   </body>
 </html>

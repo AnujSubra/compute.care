@@ -1,254 +1,151 @@
-<!-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Compute Initiative — Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="Contact The Compute Initiative — reach out for volunteering, donations, partnerships, and general questions." />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">
-          <img src="TCI%20logo%20Sep%202025.png" alt="The Compute Initiative logo" class="brand-logo" />
-          <span class="brand-text">The Compute Initiative</span>
-        </a>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="nav" id="mainNav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="donate.html" class="nav-link nav-cta">Donate</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="contact-section container card">
-        <h1>Contact Us</h1>
-        <p>
-          We welcome volunteers, sponsors, and collaborators. Reach out using the form below or email us directly at <a href="mailto:computeinitiative@gmail.com">computeinitiative@gmail.com</a>.
-        </p>
-        <form id="contactForm" class="contact-form">
-          <div class="form-row">
-            <label for="contactName">Name</label>
-            <input type="text" id="contactName" name="name" placeholder="Your name" required>
-          </div>
-          <div class="form-row">
-            <label for="contactEmail">Email</label>
-            <input type="email" id="contactEmail" name="email" placeholder="Your email" required>
-          </div>
-          <div class="form-row">
-            <label for="contactType">Type of Message</label>
-            <select id="contactType" name="type" required>
-              <option value="">Select type</option>
-              <option value="Volunteering">Volunteering</option>
-              <option value="Donation">Donation</option>
-              <option value="General Question">General Question</option>
-              <option value="Partnering">Partnering</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="contactMessage">Message</label>
-            <textarea id="contactMessage" name="message" placeholder="Your message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        <div id="contactMsg"></div>
-        <div class="contact-alt">
-          <p class="muted small">Prefer email? Write to <a href="mailto:computeinitiative@gmail.com">computeinitiative@gmail.com</a></p>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>The Compute Initiative</strong>
-          <p class="muted small">Advancing equitable access to computational resources.</p>
-        </div>
-        <nav class="footer-nav">
-          <a href="events.html">Events</a>
-          <a href="donate.html">Donate</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html> -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact — The Compute Initiative</title>
-
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
+    <meta
+      name="description"
+      content="Volunteer, partner with a school, support a classroom, or contact The Compute Initiative."
+    />
+    <meta name="theme-color" content="#11445c" />
     <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <div class="desktop">
-
-      <!-- HEADER (same as other pages) -->
-      <header class="header">
-        <div class="group"></div>
-        <div class="text-wrapper">The Compute Initiative</div>
-        <div class="frame">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="about.html" class="nav-link">About Us</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-          <a href="donate.html" class="button-new-l">
-            <div class="buttons">Donate</div>
-          </a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="The Compute Initiative home"
+          ><span class="brand-mark" aria-hidden="true"
+            >TC<span>i</span><b>✳</b></span
+          ><span>The Compute<br />Initiative</span></a
+        ><button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html">Events</a><a href="about.html">About Us</a
+          ><a href="contact.html" aria-current="page">Contact</a
+          ><a class="button nav-donate" href="donate.html"
+            >Donate <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro wrap">
+        <p class="eyebrow">Get in touch</p>
+        <h1>There’s a place for you<br />in this work.</h1>
+        <p class="lead">
+          Have a question, a skill to share, or an idea for a partnership? We’d
+          love to hear from you.
+        </p>
+      </section>
+      <section class="wrap contact-grid section-first">
+        <div>
+          <p class="eyebrow">Start a conversation</p>
+          <h2>Let’s build something<br />meaningful.</h2>
+          <a class="contact-email" href="mailto:computeinitiative@gmail.com"
+            >computeinitiative@gmail.com</a
+          >
+          <div class="contact-reasons">
+            <h3>Volunteer</h3>
+            <p>Tell us about your interests, skills, and availability.</p>
+            <h3>Partner with us</h3>
+            <p>
+              Connect your school, organisation, or community with our mission.
+            </p>
+            <h3>Support a classroom</h3>
+            <p>Ask about equipment, teaching, or ways to contribute.</p>
+          </div>
+          <p>Tamil Nadu, India · Chicago, Illinois, USA</p>
         </div>
-      </header>
-
-      <!-- MAIN CONTACT CONTENT -->
-      <main class="contact-main">
-
-        <!-- HERO -->
-        <section class="contact-hero">
-          
-          <div class="contact-hero-title">Contact The Compute Initiative</div>
-        </section>
-
-        <!-- CONTACT CARD WITH INFO + FORM -->
-        <section class="contact-card">
-          <h1>Get in touch</h1>
+        <form id="contact-form">
+          <h2>Say hello.</h2>
           <p>
-            Have questions, ideas, or want to partner with us? We’d love to hear from you.
-            Use the form below or reach out using the contact details.
+            This form opens a draft in your email app. You can review it before
+            sending.
           </p>
-
-          <div class="contact-columns">
-            <!-- Left: contact details -->
-            <div class="contact-column">
-              <h2>Contact details</h2>
-              <p>
-                <strong>Email:</strong>
-                <a href="mailto:computeinitative@gmail.com">computeinitiative@gmail.com</a><br />
-              </p>
-              <p>
-                <strong>Locations:</strong><br />
-                Tamil Nadu, India<br />
-                Chicago, Illinois, USA
-              </p>
-              <p>
-                <strong>Stay connected</strong><br />
-                Follow our journey, see updates from our partner schools, and learn how your
-                support is transforming access to technology and education.
-                <li>
-                  <u><a href="https://www.instagram.com/thecomputeinitiative/" >Instagram</a></u>
-                  <br /><br />
-                  <u><li><a href="https://www.linkedin.com/company/the-compute-initiative/" >LinkedIn</a></li></u>
-                </li>
-              </p>
-              <!-- You can add social links/icons here later -->
-            </div>
-
-            <!-- Right: contact form -->
-            <div class="contact-column">
-              <h2>Send us a message</h2>
-              <form id="contact-form" class="contact-form">
-                <div class="form-row">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" id="name" name="name" class="form-input" required />
-                </div>
-
-                <div class="form-row">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" id="email" name="email" class="form-input" required />
-                </div>
-
-                <div class="form-row">
-                  <label for="subject" class="form-label">Subject / Reason</label>
-                  <input type="text" id="subject" name="subject" class="form-input" required />
-                </div>
-
-                <div class="form-row">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="btn-primary form-submit">
-                  Send Email
-                </button>
-              </form>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <!-- FOOTER (same as other pages) -->
-      <footer class="footer">
-        <div class="frame-12">
-          <div class="group-5">
-            <div class="text-wrapper-12">THE COMPUTE INITIATIVE</div>
-            <img
-              class="TCI-logo-sep"
-              src="TCI logo Sep 2025.png"
-              alt="The Compute Initiative logo"
-            />
-          </div>
-          <p class="talent-is-everywhere">
-            Talent is everywhere, but opportunity isn’t ... yet. In the&nbsp;&nbsp;villages of Tamil Nadu, bright high school
-            students are&nbsp;&nbsp;being left behind in the digital age.<br /><br />The Compute Initiative works to
-            close this gap by providing computers, internet access, and guidance to students unfamiliar with these resources. 
+          <label for="name">Your name</label
+          ><input
+            id="name"
+            name="name"
+            autocomplete="name"
+            required
+            maxlength="120"
+          /><label for="email">Email address</label
+          ><input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            maxlength="254"
+          /><label for="subject">I’d like to…</label
+          ><select id="subject" name="subject" required>
+            <option value="">Choose a topic</option>
+            <option>Volunteer</option>
+            <option>Partner with TCI</option>
+            <option>Support a classroom</option>
+            <option>Ask a question</option></select
+          ><label for="message">Your message</label
+          ><textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            maxlength="3000"
+            placeholder="Tell us a little about yourself and how you’d like to get involved."
+          ></textarea
+          ><button class="button" type="submit">
+            Open email draft <span aria-hidden="true">↗</span>
+          </button>
+          <p id="form-status" role="status" class="small"></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            >The Compute Initiative<span class="orange">✳</span></a
+          >
+          <p>Talent is everywhere.<br />Opportunity should be, too.</p>
+          <p class="small">
+            Computers, curriculum, and community.<br />Rural Tamil Nadu, India ·
+            Chicago, USA
           </p>
         </div>
-        <div class="frame-13">
-          <div class="text-wrapper-13">Main Menu</div>
-          <div class="home-events-about-us">
-            <a href = index.html class = "home-events-about-us">Home</a><br /><br /><a href = events.html class = "home-events-about-us">Events</a><br /><br /><a href = about.html class = "home-events-about-us">About Us</a><br /><br /><a href = contact.html class = "home-events-about-us">Contact Us</a><br /><br /><a href = donate.html class = "home-events-about-us">Donate Now</a>
-          </div>
+        <div>
+          <h2>Explore</h2>
+          <a href="index.html">Home</a><a href="schools.html">Our Schools</a
+          ><a href="curriculum.html">Curriculum</a
+          ><a href="events.html">Events</a><a href="about.html">About Us</a
+          ><a href="contact.html" aria-current="page">Contact</a>
         </div>
-        <div class="frame-14">
-          <div class="text-wrapper-13">Connect With Us</div>
-          <div class="frame-15">
-            <a href="https://www.instagram.com/thecomputeinitiative/" class = "home-events-about-us">Instagram</a>
-            <br /><br />
-            <a href="https://www.linkedin.com/company/the-compute-initiative/" class = "home-events-about-us">LinkedIn</a>
-          </div>
+        <div>
+          <h2>Let’s connect</h2>
+          <a href="mailto:computeinitiative@gmail.com"
+            >computeinitiative@gmail.com</a
+          ><a href="https://www.instagram.com/thecomputeinitiative/"
+            >Instagram ↗</a
+          ><a href="https://www.linkedin.com/company/the-compute-initiative/"
+            >LinkedIn ↗</a
+          ><a href="contact.html">Volunteer or partner with us ↗</a>
         </div>
-      </footer>
-    </div>
-
-    <!-- Simple mailto handler so the form "sends" via user's email app -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contact-form");
-        if (!form) return;
-
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const name = document.getElementById("name").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const subject = document.getElementById("subject").value.trim();
-          const message = document.getElementById("message").value.trim();
-
-          const fullSubject = subject || "Message from compute.care contact form";
-          const bodyLines = [
-            "Name: " + name,
-            "Email: " + email,
-            "",
-            "Message:",
-            message
-          ];
-
-          const mailtoLink =
-            "mailto:info@compute.care" +
-            "?subject=" + encodeURIComponent(fullSubject) +
-            "&body=" + encodeURIComponent(bodyLines.join("\\n"));
-
-          window.location.href = mailtoLink;
-        });
-      });
-    </script>
+      </div>
+      <div class="wrap footer-bottom">
+        The Compute Initiative · Learning together. Growing together.
+      </div>
+    </footer>
   </body>
 </html>
